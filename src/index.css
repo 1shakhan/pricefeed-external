@@ -1,0 +1,118 @@
+:root {
+  --surface-tint: #0c56d0;
+  --primary-container: #0052cc;
+  --on-secondary-fixed: #101c2c;
+  --on-secondary-container: #596577;
+  --outline-variant: #c3c6d6;
+  --surface-variant: #e0e3e5;
+  --primary-fixed: #dae2ff;
+  --error: #ba1a1a;
+  --on-primary-container: #c4d2ff;
+  --tertiary-fixed-dim: #b1c5ff;
+  --secondary: #535f71;
+  --tertiary-container: #0954c6;
+  --surface-container-highest: #e0e3e5;
+  --on-tertiary: #ffffff;
+  --tertiary: #003e99;
+  --error-container: #ffdad6;
+  --outline: #737685;
+  --on-tertiary-fixed-variant: #00419f;
+  --on-primary: #ffffff;
+  --on-primary-fixed-variant: #0040a2;
+  --background: #f7fafc;
+  --tertiary-fixed: #dae2ff;
+  --inverse-primary: #b2c5ff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-high: #e5e9eb;
+  --primary-fixed-dim: #b2c5ff;
+  --on-secondary-fixed-variant: #3c4859;
+  --secondary-container: #d7e3f9;
+  --surface: #f7fafc;
+  --surface-dim: #d7dadc;
+  --surface-bright: #f7fafc;
+  --on-error: #ffffff;
+  --surface-container: #ebeef0;
+  --inverse-surface: #2d3133;
+  --on-error-container: #93000a;
+  --on-tertiary-container: #c4d3ff;
+  --on-background: #181c1e;
+  --inverse-on-surface: #eef1f3;
+  --on-secondary: #ffffff;
+  --surface-container-low: #f1f4f6;
+  --on-surface: #181c1e;
+  --on-surface-variant: #434654;
+  --secondary-fixed-dim: #bbc7dc;
+  --primary: #0052cc;
+  --on-primary-fixed: #001848;
+  --secondary-fixed: #d7e3f9;
+  --on-tertiary-fixed: #001947;
+
+  --radius-sm: 8px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-full: 9999px;
+
+  --font-family: 'Inter', sans-serif;
+  --max-w-7xl: 80rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--surface);
+  color: var(--on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-w-7xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

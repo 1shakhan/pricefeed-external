@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "howItWorks": "How it works",
+    "reviews": "Reviews",
+    "login": "Log in",
+    "apply": "Apply for access",
+    "language": "English"
+  },
+  "hero": {
+    "badge": "30% more convenient than competitors",
+    "title": "Professional Kaspi.kz analytics right in your browser.",
+    "subtitle": "Highly accurate data with 90% precision. The entire functionality of PriceFeed is now integrated into the Kaspi store interface.",
+    "giftcardTitle": "Register right now and get free training and a test drive for 5 requests!",
+    "giftcardSubtitle": "10 free requests per day. Unlimited upon purchasing analytics.",
+    "cta": "Get a consultation"
+  },
+  "benefits": {
+    "accuracy": {
+      "title": "90% Accuracy",
+      "desc": "PriceFeed algorithms provide the highest data accuracy on the Kazakhstan market."
+    },
+    "native": {
+      "title": "Native Interface",
+      "desc": "Analytics built right into Kaspi product cards. No need to switch between tabs anymore."
+    },
+    "speed": {
+      "title": "Working Speed",
+      "desc": "Instant data loading without delays. Work with hundreds of items in seconds."
+    }
+  },
+  "functionality": {
+    "title": "Full set of analytics tools",
+    "subtitle": "All functions of a professional dashboard are now available in one click right in the browser.",
+    "category": {
+      "title": "Analytics by each category",
+      "desc": "Detailed analysis of market niches, sales volumes and competition level in each Kaspi category with convenient sorting"
+    },
+    "calculator": {
+      "title": "Built-in profitability calculator",
+      "desc": "Find out which products are profitable and which are losing popularity among buyers, taking into account all expenses and commissions."
+    },
+    "search": {
+      "title": "Deep Search and Analytics",
+      "desc": "Market and sales analytics for finding profitable niches. Search by top brands, direct links and visibility in search results."
+    },
+    "cards": {
+      "title": "Calculator and Cards",
+      "desc": "Net profit taking into account commissions. Detailed information on the card (Price, Rating, Sales, Sellers) and adding to favorites."
+    },
+    "extension": {
+      "title": "Chrome Extension",
+      "desc": "Unlimited use of the extension for Google Chrome and Yandex Browser right in the Kaspi interface."
+    }
+  },
+  "ecosystem": {
+    "title": "More than just analytics",
+    "subtitle": "An ecosystem of tools for full control over your store on Kaspi.",
+    "unit": {
+      "title": "Store unit economics",
+      "desc": "End-to-end accounting of income and expenses. Control the margin of each sale and the net profit of the entire business."
+    },
+    "preorders": {
+      "title": "Working with pre-orders",
+      "desc": "Manage future receipts and orders. Plan purchases based on demand forecasts and current stock."
+    },
+    "warehouse": {
+      "title": "Warehouse and logistics",
+      "desc": "Print labels, manage shipments and invoices. Automate the routine of warehouse processes in one click."
+    },
+    "price": {
+      "title": "Product price management",
+      "desc": "Automate your pricing strategy. React to competitors' changes in real time."
+    },
+    "gold": {
+      "title": "Gold price changes",
+      "desc": "Specialized monitoring of market quotes for the jewelry business and accurate calculation of cost."
+    },
+    "more": "Learn more"
+  },
+  "pricing": {
+    "title": "Choose a suitable plan",
+    "subtitle": "Professional analytics tools to grow your business",
+    "recommended": "Recommended",
+    "months": "months",
+    "month": "1 month",
+    "plan3": {
+      "title": "Analytics for 3 months",
+      "price": "37 800 ₸",
+      "desc": "Basic period for stable niche monitoring"
+    },
+    "plan1": {
+      "title": "Kaspi goods analytics",
+      "price": "15 000 ₸",
+      "desc": "Analytics of the market and sales on Kaspi to find profitable goods and assess competition"
+    },
+    "plan6": {
+      "title": "Analytics for 6 months",
+      "price": "63 000 ₸",
+      "desc": "Maximum benefit for professional market players"
+    },
+    "features": [
+      "Market and sales analytics on Kaspi to find profitable goods and assess competition",
+      "Number of sales by categories, goods and brands",
+      "Number of orders and sales dynamics",
+      "Revenue by goods and categories",
+      "Number of sellers in each product card",
+      "Top brands by sales",
+      "Adding products to favorites"
+    ],
+    "detailedTitle": "Detailed information on the product card:",
+    "detailedFeatures": [
+      "Price, Rating, Sales, Sellers",
+      "Profitability calculator considering Kaspi commissions, taxes and delivery",
+      "Niche analysis before launching a product"
+    ],
+    "unlimited": "Unlimited use of Chrome extension",
+    "select": "Select plan",
+    "try": "Try now"
+  },
+  "lead": {
+    "title": "Ready to scale sales on Kaspi?",
+    "subtitle": "Leave a request, and we will grant you access to new generation analytics within 15 minutes.",
+    "quote": "PriceFeed has changed how we work with assortment. Now every decision is backed by numbers, not intuition.",
+    "author": "Serik A.",
+    "role": "Top-seller, Kaspi Store",
+    "cardTitle": "Free training and test drive",
+    "cardDesc": "Take free training on working with analytics and get 5 free requests to evaluate the power of the tool and benefit today.",
+    "cta": "Get free access",
+    "note": "No commitments • Instant start"
+  },
+  "footer": {
+    "title": "Chosen by stores all over Kazakhstan!",
+    "subtitle": "PriceFeed helps stores automate price management and increase sales on Kaspi",
+    "nav": {
+      "training": "Training",
+      "new": "New",
+      "contacts": "Contacts",
+      "about": "About us"
+    },
+    "residents": "We are residents of:",
+    "participant": "participant",
+    "app": "Convenient app for management from phone:",
+    "disclaimer": "All trademarks posted on the site are the trademarks of their respective owners and are used on the site for informational purposes only.",
+    "company": "LLP 'Digital Development Agency'",
+    "terms": "Terms of Service Agreement"
+  }
+}
