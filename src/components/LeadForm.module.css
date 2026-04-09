@@ -134,6 +134,12 @@
   }
 }
 
+.ctaIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+}
+
 .note {
   font-size: 0.625rem;
   text-align: center;

@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './LeadForm.module.css';
+import { Icon } from './Icon';
 
 export const LeadForm: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.leadForm}>
+    <section className={styles.leadForm} id="lead">
       <div className={`container ${styles.grid}`}>
         <div className={styles.content}>
           <h2 className={styles.title}>{t('lead.title')}</h2>
@@ -31,7 +32,7 @@ export const LeadForm: React.FC = () => {
           <div className={styles.actions}>
             <button className={styles.cta}>
               {t('lead.cta')}
-              <span className="material-symbols-outlined">arrow_forward</span>
+              <Icon className={styles.ctaIcon} name="arrow_forward" />
             </button>
             <p className={styles.note}>{t('lead.note')}</p>
           </div>

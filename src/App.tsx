@@ -8,12 +8,13 @@ import { Pricing } from './components/Pricing';
 import { LeadForm } from './components/LeadForm';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import styles from './App.module.css';
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className={styles.app}>
       <Header />
-      <main>
+      <main className={styles.main}>
         <Hero />
         <Benefits />
         <Functionality />
@@ -23,7 +24,7 @@ const App: React.FC = () => {
       </main>
       <Footer />
       <FloatingWhatsApp />
-    </>
+    </div>
   );
 };
 

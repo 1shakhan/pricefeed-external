@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Pricing.module.css';
+import { Icon } from './Icon';
 
 export const Pricing: React.FC = () => {
   const { t } = useTranslation();
@@ -13,13 +14,13 @@ export const Pricing: React.FC = () => {
       <ul className={styles.featuresList}>
         {features.map((feature, index) => (
           <li key={index} className={styles.featureItem}>
-            <span className="material-symbols-outlined">check_circle</span>
+            <Icon className={styles.featureIcon} name="check_circle" />
             <span>{feature}</span>
           </li>
         ))}
 
         <li className={styles.featureItem}>
-          <span className="material-symbols-outlined">check_circle</span>
+          <Icon className={styles.featureIcon} name="check_circle" />
           <div>
             <p className={styles.detailedTitle}>{t('pricing.detailedTitle')}</p>
             <ul className={styles.detailedList}>
@@ -31,7 +32,7 @@ export const Pricing: React.FC = () => {
         </li>
 
         <li className={styles.featureItem}>
-          <span className="material-symbols-outlined">check_circle</span>
+          <Icon className={styles.featureIcon} name="check_circle" />
           <span>{t('pricing.unlimited')}</span>
         </li>
       </ul>
@@ -39,7 +40,7 @@ export const Pricing: React.FC = () => {
   };
 
   return (
-    <section className={styles.pricing}>
+    <section className={styles.pricing} id="pricing">
       <div className="container">
         <div className={styles.header}>
           <h2 className={styles.title}>{t('pricing.title')}</h2>

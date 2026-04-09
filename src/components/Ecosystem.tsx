@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Ecosystem.module.css';
+import { Icon, type IconName } from './Icon';
 
 export const Ecosystem: React.FC = () => {
   const { t } = useTranslation();
 
-  const features = [
+  const features: Array<{ id: string; icon: IconName }> = [
     { id: 'unit', icon: 'account_balance_wallet' },
     { id: 'preorders', icon: 'pending_actions' },
     { id: 'warehouse', icon: 'inventory_2' },
@@ -14,7 +15,7 @@ export const Ecosystem: React.FC = () => {
   ];
 
   return (
-    <section className={styles.ecosystem}>
+    <section className={styles.ecosystem} id="ecosystem">
       <div className="container">
         <div className={styles.header}>
           <h2 className={styles.title}>{t('ecosystem.title')}</h2>
@@ -25,14 +26,14 @@ export const Ecosystem: React.FC = () => {
           {features.map((feature) => (
             <div key={feature.id} className={styles.card}>
               <div className={styles.iconWrapper}>
-                <span className="material-symbols-outlined">{feature.icon}</span>
+                <Icon className={styles.icon} name={feature.icon} />
               </div>
               <h3 className={styles.cardTitle}>{t(`ecosystem.${feature.id}.title`)}</h3>
               <p className={styles.cardDesc}>{t(`ecosystem.${feature.id}.desc`)}</p>
 
               <div className={styles.more}>
                 <span className={styles.moreLink}>
-                  {t('ecosystem.more')} <span className="material-symbols-outlined">arrow_forward</span>
+                  {t('ecosystem.more')} <Icon className={styles.moreIcon} name="arrow_forward" />
                 </span>
               </div>
             </div>

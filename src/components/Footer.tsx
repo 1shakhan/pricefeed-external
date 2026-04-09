@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
+import { StoreBadge } from './StoreBadge';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       <div className={`container ${styles.container}`}>
         <div className={styles.header}>
           <h3 className={styles.title}>{t('footer.title')}</h3>
@@ -14,17 +15,17 @@ export const Footer: React.FC = () => {
         </div>
 
         <nav className={styles.nav}>
-          <a href="#">{t('nav.features')}</a>
-          <a href="#">{t('nav.pricing')}</a>
-          <a href="#">{t('nav.howItWorks')}</a>
-          <a href="#">{t('nav.reviews')}</a>
-          <a href="#" className={styles.navWithBadge}>
+          <a href="#benefits">{t('nav.features')}</a>
+          <a href="#pricing">{t('nav.pricing')}</a>
+          <a href="#functionality">{t('nav.howItWorks')}</a>
+          <a href="#lead">{t('nav.reviews')}</a>
+          <a href="#ecosystem" className={styles.navWithBadge}>
             {t('footer.nav.training')}
             <span className={styles.badge}>{t('footer.nav.new')}</span>
           </a>
-          <a href="#">{t('footer.nav.contacts')}</a>
-          <a href="#">{t('footer.nav.about')}</a>
-          <a href="#">{t('nav.login')}</a>
+          <a href="#footer">{t('footer.nav.contacts')}</a>
+          <a href="#top">{t('footer.nav.about')}</a>
+          <a href="#top">{t('nav.login')}</a>
         </nav>
 
         <div className={styles.residents}>
@@ -43,8 +44,8 @@ export const Footer: React.FC = () => {
         <div className={styles.appLinks}>
           <p className={styles.appText}>{t('footer.app')}</p>
           <div className={styles.appLogos}>
-            <a href="#"><img alt="Google Play" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8b6etJzUKP2EG52oYZHznMeH5wY6GIPKDS6ZAxzZXGuabqWEgeoRi1i7HOPA8OzwWU0V_2BhthHoFLpsMeLAqp4vJQp6YTTIC78XNBf4BpYkqKPwTHn4cf2YLg7wfiJDQPC-F5BmiSI_unZhZFBobedsNukbZ5iugVOb4vRxPHOpxGVexR7cxbUqTvalJ2gNMGhiMmzuvs2Ovx26lhQQuevZvUP4EoyQ52nqNnMFUC6sE3e_qBnKL048YhZMMuk152oubKytwhzz" /></a>
-            <a href="#"><img alt="App Store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHagt9jPmoSvlf1n41-pRp8wY9rMGPXuS5Lj4IkNipQYxSNCZtQL0aAD_q8VWyuGFv0RiT4F-rRLch1Jd816Inu1Rc2ToZVG7bzAOAu2sS-krmHFp3lgIGESJVujh3a_ZkougcIkRdFnXCahJeUl25lz8pCj9-X60WJEXpRYYyM1SYP2krSBlZPRPhxdBIEf5FlNhMnW_DRHReqj7atnciuDTRPgsmK71I2AtDa06M4CC8lly6kJjDvt1QG1XZi-n2B5f2dVdmI_b9" /></a>
+            <StoreBadge store="google-play" theme="light" />
+            <StoreBadge store="app-store" theme="light" />
           </div>
         </div>
 

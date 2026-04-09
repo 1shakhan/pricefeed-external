@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Functionality.module.css';
+import { Icon } from './Icon';
 
 export const Functionality: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.functionality}>
+    <section className={styles.functionality} id="functionality">
       <div className="container">
         <div className={styles.header}>
           <h2 className={styles.title}>{t('functionality.title')}</h2>
@@ -16,7 +17,7 @@ export const Functionality: React.FC = () => {
         <div className={styles.grid}>
           <div className={`${styles.card} ${styles.colSpan3}`}>
             <div>
-              <span className={`material-symbols-outlined ${styles.iconLarge}`}>category</span>
+              <Icon className={styles.iconLarge} name="category" />
               <h4 className={styles.cardTitle}>{t('functionality.category.title')}</h4>
               <p className={styles.cardDesc}>{t('functionality.category.desc')}</p>
             </div>
@@ -29,7 +30,7 @@ export const Functionality: React.FC = () => {
 
           <div className={`${styles.card} ${styles.colSpan3}`}>
             <div>
-              <span className={`material-symbols-outlined ${styles.iconLarge}`}>trending_up</span>
+              <Icon className={styles.iconLarge} name="trending_up" />
               <h4 className={styles.cardTitle}>{t('functionality.calculator.title')}</h4>
               <p className={styles.cardDesc}>{t('functionality.calculator.desc')}</p>
             </div>
@@ -41,19 +42,19 @@ export const Functionality: React.FC = () => {
           </div>
 
           <div className={`${styles.smallCard} ${styles.colSpan2}`}>
-            <span className={`material-symbols-outlined ${styles.iconSmall}`}>search</span>
+            <Icon className={styles.iconSmall} name="search" />
             <h4 className={styles.smallCardTitle}>{t('functionality.search.title')}</h4>
             <p className={styles.smallCardDesc}>{t('functionality.search.desc')}</p>
           </div>
 
           <div className={`${styles.smallCard} ${styles.colSpan2}`}>
-            <span className={`material-symbols-outlined ${styles.iconSmall}`}>calculate</span>
+            <Icon className={styles.iconSmall} name="calculate" />
             <h4 className={styles.smallCardTitle}>{t('functionality.cards.title')}</h4>
             <p className={styles.smallCardDesc}>{t('functionality.cards.desc')}</p>
           </div>
 
           <div className={`${styles.blueCard} ${styles.colSpan2}`}>
-            <span className={`material-symbols-outlined ${styles.iconSmallWhite}`}>extension</span>
+            <Icon className={styles.iconSmallWhite} name="extension" />
             <h4 className={styles.smallCardTitle}>{t('functionality.extension.title')}</h4>
             <p className={styles.blueCardDesc}>{t('functionality.extension.desc')}</p>
           </div>

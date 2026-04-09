@@ -53,8 +53,9 @@
   --radius-xl: 8px;
   --radius-full: 9999px;
 
-  --font-family: 'Inter', sans-serif;
+  --font-family: 'Apple SD Gothic Neo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --max-w-7xl: 80rem;
+  --header-height: 4.5rem;
 }
 
 *, *::before, *::after {
@@ -70,8 +71,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+#root {
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+main {
+  padding-top: var(--header-height);
 }
 
 a {
@@ -103,6 +120,11 @@ ul, ol {
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
 }
 
 .sr-only {

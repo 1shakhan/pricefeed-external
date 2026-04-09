@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   background-color: var(--surface);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   overflow: hidden;
 
   @media (min-width: 1024px) {
@@ -88,10 +88,12 @@
   border-radius: var(--radius-full);
   display: flex;
 
-  & .material-symbols-outlined {
-    color: var(--on-background);
-    font-size: 1.5rem;
-  }
+}
+
+.giftcardIconSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--on-background);
 }
 
 .giftcardTitle {
@@ -110,6 +112,9 @@
 }
 
 .cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: var(--primary);
   color: white;

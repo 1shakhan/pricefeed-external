@@ -127,17 +127,9 @@
 
 .appLogos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-
-  & img {
-    height: 3rem;
-    transition: transform 0.2s;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
 }
 
 .disclaimer {

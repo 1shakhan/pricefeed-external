@@ -64,9 +64,12 @@
   justify-content: center;
   margin-bottom: 1.5rem;
 
-  & .material-symbols-outlined {
-    color: var(--primary);
-  }
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
 }
 
 .cardTitle {
@@ -99,8 +102,9 @@
   &:hover {
     text-decoration: underline;
   }
+}
 
-  & .material-symbols-outlined {
-    font-size: 0.875rem;
-  }
+.moreIcon {
+  width: 0.875rem;
+  height: 0.875rem;
 }

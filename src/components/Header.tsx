@@ -1,12 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Header.module.css';
+import { Icon } from './Icon';
+import { StoreBadge } from './StoreBadge';
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+  const currentLanguage = i18n.resolvedLanguage?.split('-')[0] ?? 'ru';
+
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    i18n.changeLanguage(event.target.value);
   };
 
   return (
@@ -22,23 +26,34 @@ export const Header: React.FC = () => {
             <span>PriceFeed</span>
           </div>
           <div className={styles.links}>
-            <a href="#" className={styles.active}>{t('nav.features')}</a>
-            <a href="#">{t('nav.pricing')}</a>
-            <a href="#">{t('nav.howItWorks')}</a>
-            <a href="#">{t('nav.reviews')}</a>
+            <a href="#benefits" className={styles.active}>{t('nav.features')}</a>
+            <a href="#pricing">{t('nav.pricing')}</a>
+            <a href="#functionality">{t('nav.howItWorks')}</a>
+            <a href="#lead">{t('nav.reviews')}</a>
           </div>
         </div>
         <div className={styles.right}>
           <div className={styles.apps}>
-            <img alt="App Store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9tXsWTirRfgZrzXPKY4nHBwwyYA4sgwCPRCNmpjW9wz12V8qMGbU5vRpoSPaH3PpR8_ET0dDOldMoUqhlCYC6iD3MlJ4k7FV8BrvMlEMsMYvqVD4TcYQf3wq2xDk7GH4UHZCwKYABWtKvHRBnfjtPFDD36mKnk6P9rVdJmWF9pyIxqcIXc_qmpVlxorNTyUQJqggYN0tzGD_M6_9nXZ12YlNCw5uxK6wRW_J-8ObuGercrpF5fG9k-OtkCR62ZLbS82tra68QS19B" />
-            <img alt="Google Play" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXRUgni82yJ0Xk8sA9-y-MNfteq2TyadOmbWKl6CvTL8J9ZeMw0Wcry7-bxiOonw0NKhwkYIv6jHKx03xIpp1qV43jzjvn7BZyB2rT0XaeUpyjZRR2vP3Thh4qPxlJ8SRNcbFr-ZqCrgePNjuitVX4fO4D-domr2vz23ZSZ-1a11OR5B2vw9RgfaIMsCKqZkWdgK3jlKfGmfoQzIZRySn7DcZaK4m1ahauQwHOx1QPSx-B1WeBYm3fqHao4Tav0fkUl3k_gsHrf8_4" />
+            <StoreBadge size="compact" store="app-store" theme="light" />
+            <StoreBadge size="compact" store="google-play" theme="light" />
           </div>
           <button className={styles.loginBtn}>{t('nav.login')}</button>
-          <button className={styles.applyBtn}>{t('nav.apply')}</button>
-          <div className={styles.lang} onClick={toggleLanguage}>
-            <span>{t('nav.language')}</span>
-            <span className="material-symbols-outlined">expand_more</span>
-          </div>
+          <a className={styles.applyBtn} href="#lead">{t('nav.apply')}</a>
+          <label className={styles.lang} htmlFor="language-select">
+            <span className={styles.langControl}>
+              <select
+                className={styles.langSelect}
+                id="language-select"
+                onChange={handleLanguageChange}
+                value={currentLanguage}
+              >
+                <option value="ru">Русский</option>
+                <option value="kk">Қазақша</option>
+                <option value="en">English</option>
+              </select>
+              <Icon className={styles.langIcon} name="expand_more" />
+            </span>
+          </label>
         </div>
       </nav>
     </header>
