@@ -1,5 +1,6 @@
 {
   "nav": {
+    "menu": "Menu",
     "features": "Features",
     "pricing": "Pricing",
     "howItWorks": "How it works",
@@ -12,7 +13,6 @@
     "title": "Professional Kaspi.kz analytics right in your browser.",
     "subtitle": "Highly accurate data with 90% precision. The entire functionality of PriceFeed is now integrated into the Kaspi store interface.",
     "giftcardTitle": "Register right now and get free training and a test drive for 5 requests!",
-    "giftcardSubtitle": "10 free requests per day. Unlimited upon purchasing analytics.",
     "cta": "Get a consultation"
   },
   "benefits": {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Header.module.css';
-import { Icon } from './Icon';
 import { StoreBadge } from './StoreBadge';
 
 export const Header: React.FC = () => {
@@ -35,34 +34,32 @@ export const Header: React.FC = () => {
               <path d="M122.048 24.7357C121.125 23.7081 119.93 23.0054 118.587 22.6995C117.856 22.5274 117.101 22.4414 116.355 22.4414C116.111 22.4414 115.863 22.4462 115.629 22.4653C113.645 22.5561 111.781 23.493 110.524 25.0273C109.783 25.9116 109.243 26.9249 108.927 28.0338C108.674 28.9468 108.545 29.8884 108.554 30.83C108.554 31.2028 108.573 31.5804 108.612 31.9389C108.769 33.8174 109.587 35.5955 110.901 36.9338C111.733 37.8085 112.78 38.4538 113.936 38.8123C114.749 39.0561 115.585 39.1804 116.432 39.1804C116.723 39.1804 117.005 39.1708 117.278 39.1517C119.276 39.0465 121.183 38.2387 122.655 36.8621C122.956 36.561 123.109 36.1834 123.109 35.7484C123.109 35.6911 123.109 35.6337 123.099 35.5811C123.08 35.4521 123.037 35.3278 122.97 35.1988C122.923 35.1127 122.87 35.0362 122.808 34.9646C122.674 34.802 122.502 34.6825 122.301 34.6156C122.177 34.5726 122.048 34.5535 121.919 34.5535C121.704 34.563 121.522 34.5917 121.336 34.673C121.207 34.7303 121.082 34.802 120.991 34.869C120.198 35.39 119.424 35.7771 118.678 36.0305C118.042 36.2551 117.373 36.3698 116.694 36.3746C115.528 36.3889 114.343 35.9396 113.454 35.1127C113.119 34.8116 112.847 34.4483 112.651 34.0373C112.459 33.6501 112.316 33.2008 112.22 32.6989C112.158 32.3691 112.115 32.0345 112.091 31.6999H122.516C122.597 31.6999 122.684 31.6999 122.765 31.6856C122.899 31.6713 123.023 31.6426 123.128 31.6043C123.31 31.5422 123.477 31.437 123.616 31.2889C123.85 31.0308 123.979 30.7105 123.979 30.3425C123.955 29.4104 123.835 28.5357 123.625 27.7566C123.338 26.6477 122.793 25.6057 122.038 24.7357H122.048ZM120.576 29.1666H112.211C112.35 28.1915 112.77 27.2881 113.42 26.5473C113.793 26.1171 114.266 25.7777 114.782 25.5626C115.251 25.3762 115.748 25.2806 116.255 25.2806C116.785 25.2854 117.292 25.3332 117.736 25.4479C118.377 25.6057 118.955 25.945 119.4 26.4278C119.844 26.9153 120.174 27.5224 120.375 28.225C120.461 28.5309 120.528 28.8416 120.571 29.1571L120.576 29.1666Z" fill="#001B64" />
             </svg>
           </div>
-          <div className={styles.links}>
-            <a href="#benefits">{t('nav.features')}</a>
-            <a href="#pricing">{t('nav.pricing')}</a>
-            <a href="#functionality">{t('nav.howItWorks')}</a>
-            <a href="#lead">{t('nav.reviews')}</a>
-          </div>
         </div>
         <div className={styles.right}>
+          <div className={styles.links}>
+            <div className={styles.menuToggle}>{t('nav.menu') || 'Menu'}</div>
+            <div className={styles.dropdown}>
+              <a href="#benefits">{t('nav.features')}</a>
+              <a href="#pricing">{t('nav.pricing')}</a>
+              <a href="#functionality">{t('nav.howItWorks')}</a>
+              <a href="#lead">{t('nav.reviews')}</a>
+            </div>
+          </div>
+          <button className={styles.loginBtn}>{t('nav.login')}</button>
           <div className={styles.apps}>
             <StoreBadge href={appStoreUrl} size="compact" store="app-store" theme="light" />
             <StoreBadge href={playStoreUrl} size="compact" store="google-play" theme="light" />
           </div>
-          <button className={styles.loginBtn}>{t('nav.login')}</button>
-          <label className={styles.lang} htmlFor="language-select">
-            <span className={styles.langControl}>
-              <select
-                className={styles.langSelect}
-                id="language-select"
-                onChange={handleLanguageChange}
-                value={currentLanguage}
-              >
-                <option value="ru">Русский</option>
-                <option value="kk">Қазақша</option>
-                <option value="en">English</option>
-              </select>
-              <Icon className={styles.langIcon} name="expand_more" />
-            </span>
-          </label>
+          <select
+            className={styles.langSelect}
+            id="language-select"
+            onChange={handleLanguageChange}
+            value={currentLanguage}
+          >
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақша</option>
+            <option value="en">English</option>
+          </select>
         </div>
       </nav>
     </header>

@@ -264,14 +264,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
 main {
   padding-top: var(--header-height);
 }

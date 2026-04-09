@@ -6,12 +6,12 @@ import { Icon, type IconName } from './Icon';
 export const Ecosystem: React.FC = () => {
   const { t } = useTranslation();
 
-  const features: Array<{ id: string; icon: IconName }> = [
-    { id: 'unit', icon: 'account_balance_wallet' },
-    { id: 'preorders', icon: 'pending_actions' },
-    { id: 'warehouse', icon: 'inventory_2' },
-    { id: 'price', icon: 'sell' },
-    { id: 'gold', icon: 'currency_exchange' }
+  const features: Array<{ id: string; icon: IconName; size: 'large' | 'medium' | 'small' | 'wide' }> = [
+    { id: 'unit', icon: 'account_balance_wallet', size: 'large' },
+    { id: 'preorders', icon: 'pending_actions', size: 'medium' },
+    { id: 'warehouse', icon: 'inventory_2', size: 'small' },
+    { id: 'price', icon: 'sell', size: 'small' },
+    { id: 'gold', icon: 'currency_exchange', size: 'wide' }
   ];
 
   return (
@@ -24,18 +24,17 @@ export const Ecosystem: React.FC = () => {
 
         <div className={styles.grid}>
           {features.map((feature) => (
-            <div key={feature.id} className={styles.card}>
-              <div className={styles.iconWrapper}>
-                <Icon className={styles.icon} name={feature.icon} />
+            <div key={feature.id} className={`${styles.card} ${styles[feature.size]} ${styles[feature.id]}`}>
+              <div className={styles.cardContent}>
+                <div className={styles.iconWrapper}>
+                  <Icon className={styles.icon} name={feature.icon} />
+                </div>
+                <div className={styles.textContent}>
+                  <h3 className={styles.cardTitle}>{t(`ecosystem.${feature.id}.title`)}</h3>
+                  <p className={styles.cardDesc}>{t(`ecosystem.${feature.id}.desc`)}</p>
+                </div>
               </div>
-              <h3 className={styles.cardTitle}>{t(`ecosystem.${feature.id}.title`)}</h3>
-              <p className={styles.cardDesc}>{t(`ecosystem.${feature.id}.desc`)}</p>
-
-              <div className={styles.more}>
-                <span className={styles.moreLink}>
-                  {t('ecosystem.more')} <Icon className={styles.moreIcon} name="arrow_forward" />
-                </span>
-              </div>
+              <Icon className={styles.bgIcon} name={feature.icon} />
             </div>
           ))}
         </div>

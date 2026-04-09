@@ -21,7 +21,6 @@ export const Hero: React.FC = () => {
               </div>
               <div className={styles.giftcardText}>
                 <p className={styles.giftcardTitle}>{t('hero.giftcardTitle')}</p>
-                <p className={styles.giftcardSubtitle}>{t('hero.giftcardSubtitle')}</p>
               </div>
             </div>
 

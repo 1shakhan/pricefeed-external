@@ -1,22 +1,23 @@
 .functionality {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: var(--surface);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .title {
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: var(--on-surface);
+  letter-spacing: -0.02em;
 
   @media (min-width: 768px) {
-    font-size: 2.25rem;
+    font-size: 3.25rem;
   }
 }
 
@@ -25,12 +26,14 @@
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
@@ -39,22 +42,19 @@
 
 .card {
   background-color: var(--surface-container-low);
-  padding: 2rem;
-  border-radius: var(--radius-sm);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: var(--border-subtle);
-  box-shadow: var(--shadow-card-lg);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
+  border: var(--border-surface);
+  box-shadow: var(--shadow-card-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-card-lg-hover);
-    border-color: var(--overlay-primary-12);
+    border-color: var(--primary-container);
   }
 }
 
@@ -71,94 +71,101 @@
 }
 
 .iconLarge {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cardTitle {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
   color: var(--on-surface);
 }
 
 .cardDesc {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--on-surface-variant);
-  line-height: 1.5;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .cardImage {
-  margin-top: 1.5rem;
-  border-radius: var(--radius-sm);
+  margin-top: 2rem;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-image-soft);
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .smallCard {
   background-color: var(--surface-container-low);
-  padding: 1.5rem;
-  border-radius: var(--radius-sm);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--overlay-slate-5);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-card-sm);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-card-md);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-md-hover);
+    border-color: var(--primary-container);
   }
 }
 
 .blueCard {
   background: var(--gradient-primary-card);
   color: var(--color-white);
-  padding: 1.5rem;
-  border-radius: var(--radius-sm);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-primary-card);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-primary-card-hover);
   }
 }
 
 .iconSmall {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   display: block;
 }
 
 .iconSmallWhite {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   display: block;
 }
 
 .smallCardTitle {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
 }
 
 .smallCardDesc {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--on-surface-variant);
-  line-height: 1.625;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .blueCardDesc {
-  font-size: 0.75rem;
-  opacity: 0.8;
-  line-height: 1.625;
+  font-size: 0.875rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-weight: 500;
 }
