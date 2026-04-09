@@ -39,6 +39,8 @@ export const StoreBadge: React.FC<StoreBadgeProps> = ({
       aria-label={isAppStore ? 'Download on the App Store' : 'Get it on Google Play'}
       className={`${styles.badge} ${themeClass} ${sizeClass}`}
       href={href}
+      rel="noreferrer"
+      target="_blank"
     >
       <span className={styles.iconWrap}>
         {isAppStore ? <AppStoreGlyph /> : <GooglePlayGlyph />}

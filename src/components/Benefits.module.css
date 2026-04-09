@@ -18,25 +18,30 @@
   background-color: var(--surface-container-lowest);
   padding: 2rem;
   border-radius: var(--radius-sm);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s;
+  box-shadow: var(--shadow-card-sm);
+  border: var(--border-subtle);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-md-hover);
+    border-color: var(--overlay-primary-12);
   }
 }
 
 .iconWrapper {
   width: 3rem;
   height: 3rem;
-  background-color: rgba(0, 82, 204, 0.1); /* primary-container/10 */
+  background-color: var(--overlay-primary-10);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-
+  box-shadow: var(--shadow-inset-soft);
 }
 
 .icon {

@@ -39,19 +39,25 @@
   background-color: var(--surface-container-lowest);
   padding: 2rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(224, 227, 229, 0.3);
+  border: var(--border-surface);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s;
+  box-shadow: var(--shadow-card-md);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-md-hover);
+    border-color: var(--overlay-primary-12);
   }
 }
 
 .cardRecommended {
   border: 2px solid var(--primary);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px var(--overlay-black-10);
   position: relative;
   z-index: 10;
 
@@ -66,7 +72,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--primary);
-  color: white;
+  color: var(--color-white);
   padding: 0.375rem 1.25rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
@@ -109,8 +115,8 @@
 }
 
 .discount {
-  background-color: #fee2e2;
-  color: #dc2626;
+  background-color: var(--color-red-100);
+  color: var(--color-red-600);
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.125rem 0.5rem;
@@ -168,16 +174,20 @@
 
 .btnPrimary {
   width: 100%;
-  background-color: var(--primary);
-  color: white;
+  background: var(--gradient-primary);
+  color: var(--color-white);
   padding: 1rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.2);
-  transition: all 0.2s;
+  box-shadow: var(--shadow-button);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.96;
+    box-shadow: var(--shadow-button-hover);
   }
 
   &:active {
@@ -193,9 +203,14 @@
   padding: 0.875rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  transition: background-color 0.2s;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
-    background-color: rgba(0, 82, 204, 0.05);
+    background-color: var(--overlay-primary-5);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-secondary-hover);
   }
 }

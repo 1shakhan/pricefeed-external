@@ -143,6 +143,10 @@
     "app": "Convenient app for management from phone:",
     "disclaimer": "All trademarks posted on the site are the trademarks of their respective owners and are used on the site for informational purposes only.",
     "company": "LLP 'Digital Development Agency'",
-    "terms": "Terms of Service Agreement"
+    "terms": "Terms of Service Agreement",
+    "privacy": "Privacy Policy"
+  },
+  "whatsapp": {
+    "message": "Hello! I would like to learn more about the PriceFeed kaspi bot and its capabilities."
   }
 }

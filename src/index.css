@@ -1,3 +1,53 @@
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Apple SD Gothic Neo Medium'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/400_AppleSDGothicNeo-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/400_AppleSDGothicNeo-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('Apple SD Gothic Neo Regular'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/500_AppleSDGothicNeo-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/500_AppleSDGothicNeo-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Apple SD Gothic Neo SemiBold'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/600_AppleSDGothicNeo-SemiBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/600_AppleSDGothicNeo-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Apple SD Gothic Neo Bold'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/700_AppleSDGothicNeo-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/700_AppleSDGothicNeo-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 800;
+  src:
+    local('Apple SD Gothic Neo ExtraBold'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/800_AppleSDGothicNeo-ExtraBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/fonts/800_AppleSDGothicNeo-ExtraBold.otf') format('opentype');
+}
+
 :root {
   --surface-tint: #0c56d0;
   --primary-container: #0052cc;
@@ -56,6 +106,141 @@
   --font-family: 'Apple SD Gothic Neo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --max-w-7xl: 80rem;
   --header-height: 4.5rem;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-slate-900: #111827;
+  --color-blue-100: #dbeafe;
+  --color-blue-400: #526df1;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-100: #fee2e2;
+  --color-gold-400: #ffd700;
+  --color-gold-300: #ffe45c;
+  --color-whatsapp-500: #25d366;
+  --color-whatsapp-600: #17b554;
+  --color-store-dark-top: #1d1d1f;
+  --color-store-dark-bottom: #050505;
+  --color-google-blue: #00c3ff;
+  --color-google-yellow: #ffce00;
+  --color-google-green: #32d74b;
+  --color-google-red: #ff5f57;
+
+  --overlay-white-8: rgba(255, 255, 255, 0.08);
+  --overlay-white-10: rgba(255, 255, 255, 0.1);
+  --overlay-white-20: rgba(255, 255, 255, 0.2);
+  --overlay-white-40: rgba(255, 255, 255, 0.4);
+  --overlay-white-45: rgba(255, 255, 255, 0.45);
+  --overlay-white-62: rgba(255, 255, 255, 0.62);
+  --overlay-white-72: rgba(255, 255, 255, 0.72);
+  --overlay-white-85: rgba(255, 255, 255, 0.85);
+  --overlay-white-86: rgba(255, 255, 255, 0.86);
+  --overlay-white-88: rgba(255, 255, 255, 0.88);
+  --overlay-white-90: rgba(255, 255, 255, 0.9);
+  --overlay-white-92: rgba(255, 255, 255, 0.92);
+  --overlay-white-94: rgba(255, 255, 255, 0.94);
+  --overlay-white-96: rgba(255, 255, 255, 0.96);
+  --overlay-white-97: rgba(255, 255, 255, 0.97);
+  --overlay-black-5: rgba(0, 0, 0, 0.05);
+  --overlay-black-10: rgba(0, 0, 0, 0.1);
+  --overlay-black-25: rgba(0, 0, 0, 0.25);
+  --overlay-primary-5: rgba(0, 82, 204, 0.05);
+  --overlay-primary-7: rgba(0, 82, 204, 0.07);
+  --overlay-primary-8: rgba(0, 82, 204, 0.08);
+  --overlay-primary-10: rgba(0, 82, 204, 0.1);
+  --overlay-primary-12: rgba(0, 82, 204, 0.12);
+  --overlay-primary-20: rgba(0, 82, 204, 0.2);
+  --overlay-slate-5: rgba(15, 23, 42, 0.05);
+  --overlay-slate-20: rgba(15, 23, 42, 0.2);
+  --overlay-slate-28: rgba(15, 23, 42, 0.28);
+  --overlay-slate-30: rgba(15, 23, 42, 0.3);
+  --overlay-slate-34: rgba(15, 23, 42, 0.34);
+  --overlay-slate-35: rgba(15, 23, 42, 0.35);
+  --overlay-slate-36: rgba(15, 23, 42, 0.36);
+  --overlay-slate-40: rgba(15, 23, 42, 0.4);
+  --overlay-navy-24: rgba(14, 32, 90, 0.24);
+  --overlay-navy-28: rgba(14, 32, 90, 0.28);
+  --overlay-deep-40: rgba(0, 29, 84, 0.4);
+  --overlay-deep-42: rgba(0, 29, 84, 0.42);
+  --overlay-deep-45: rgba(0, 29, 84, 0.45);
+  --overlay-ink-42: rgba(16, 28, 44, 0.42);
+  --overlay-gold-34: rgba(167, 112, 0, 0.34);
+  --overlay-green-42: rgba(10, 99, 45, 0.42);
+  --overlay-text-70: rgba(67, 70, 84, 0.8);
+
+  --gradient-app-bg:
+    radial-gradient(circle at top right, var(--overlay-primary-12), transparent 28rem),
+    linear-gradient(180deg, var(--color-white) 0%, var(--surface) 14rem, var(--surface) 100%);
+  --gradient-header-surface:
+    linear-gradient(180deg, var(--overlay-white-97) 0%, var(--overlay-white-92) 100%);
+  --gradient-pill-surface:
+    linear-gradient(180deg, var(--overlay-white-92) 0%, var(--overlay-white-96) 100%);
+  --gradient-control-surface:
+    linear-gradient(180deg, var(--overlay-white-94) 0%, rgba(241, 244, 246, 0.98) 100%);
+  --gradient-primary:
+    linear-gradient(135deg, var(--primary) 0%, #1f6fe7 100%);
+  --gradient-primary-strong:
+    linear-gradient(135deg, var(--primary) 0%, #0b5fdc 100%);
+  --gradient-primary-card:
+    linear-gradient(160deg, var(--primary) 0%, #2270e8 100%);
+  --gradient-gold:
+    linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-300) 100%);
+  --gradient-whatsapp:
+    linear-gradient(180deg, var(--color-whatsapp-500) 0%, var(--color-whatsapp-600) 100%);
+  --gradient-store-dark:
+    linear-gradient(180deg, var(--color-store-dark-top) 0%, var(--color-store-dark-bottom) 100%);
+  --gradient-store-light:
+    linear-gradient(180deg, var(--overlay-white-96) 0%, rgba(244, 247, 251, 0.98) 100%);
+
+  --shadow-header: 0 18px 36px -34px var(--overlay-ink-42);
+  --shadow-header-soft:
+    0 14px 28px -26px var(--overlay-deep-40),
+    inset 0 1px 0 var(--overlay-white-86);
+  --shadow-control:
+    0 12px 24px -22px var(--overlay-deep-45),
+    inset 0 1px 0 var(--overlay-white-85);
+  --shadow-control-hover:
+    0 14px 28px -24px var(--overlay-deep-42),
+    inset 0 1px 0 var(--overlay-white-88);
+  --shadow-control-focus:
+    0 0 0 4px var(--overlay-primary-12),
+    0 12px 24px -22px var(--overlay-deep-45),
+    inset 0 1px 0 var(--overlay-white-85);
+  --shadow-card-sm: 0 14px 32px -28px var(--overlay-slate-30);
+  --shadow-card-md: 0 18px 34px -32px var(--overlay-slate-28);
+  --shadow-card-md-hover: 0 24px 40px -28px var(--overlay-slate-34);
+  --shadow-card-lg: 0 16px 30px -30px var(--overlay-slate-35);
+  --shadow-card-lg-hover: 0 24px 38px -30px var(--overlay-slate-40);
+  --shadow-image: 0 25px 50px -12px var(--overlay-black-25);
+  --shadow-image-soft: 0 16px 24px -18px var(--overlay-slate-20);
+  --shadow-button: 0 10px 15px -3px var(--overlay-primary-20);
+  --shadow-button-hover: 0 18px 28px -16px rgba(0, 82, 204, 0.38);
+  --shadow-button-strong: 0 16px 28px -20px rgba(0, 82, 204, 0.5);
+  --shadow-button-strong-hover: 0 20px 34px -22px rgba(0, 82, 204, 0.58);
+  --shadow-primary-card: 0 20px 30px -24px rgba(0, 82, 204, 0.45);
+  --shadow-primary-card-hover: 0 26px 40px -26px rgba(0, 82, 204, 0.52);
+  --shadow-secondary-hover: 0 12px 20px -18px rgba(0, 82, 204, 0.32);
+  --shadow-store-dark: 0 12px 24px -18px rgba(0, 0, 0, 0.9);
+  --shadow-store-light:
+    0 12px 24px -22px var(--overlay-navy-24),
+    inset 0 1px 0 var(--overlay-white-88);
+  --shadow-store-light-hover:
+    0 14px 28px -22px var(--overlay-navy-28),
+    inset 0 1px 0 var(--overlay-white-90);
+  --shadow-whatsapp: 0 25px 50px -12px var(--overlay-black-25);
+  --shadow-whatsapp-hover: 0 28px 52px -16px var(--overlay-green-42);
+  --shadow-gold: 0 18px 30px -26px var(--overlay-gold-34);
+  --shadow-inset-soft: inset 0 1px 0 var(--overlay-white-40);
+  --shadow-inset-medium: inset 0 1px 0 var(--overlay-white-45);
+  --shadow-inset-subtle: inset 0 1px 0 var(--overlay-white-8);
+
+  --border-subtle: 1px solid var(--overlay-black-5);
+  --border-surface: 1px solid rgba(224, 227, 229, 0.3);
+  --border-surface-strong: 1px solid rgba(224, 227, 229, 0.45);
+  --border-divider-soft: 1px solid rgba(224, 227, 229, 0.2);
+  --border-primary-subtle: 1px solid var(--overlay-primary-12);
+  --border-white-soft: 1px solid var(--overlay-white-20);
+  --border-white-faint: 1px solid var(--overlay-white-10);
 }
 
 *, *::before, *::after {
