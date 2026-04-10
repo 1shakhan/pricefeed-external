@@ -164,8 +164,7 @@
 }
 
 .featureIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  font-size: 1.25rem;
   color: var(--primary);
   margin-top: 0.125rem;
   flex-shrink: 0;

@@ -647,7 +647,9 @@
 /* CTA Section */
 .ctaSection {
   padding: 6rem 0;
-  background-color: var(--primary-container);
+  background-color: var(--surface-container-low);
+  overflow: hidden;
+  position: relative;
 }
 
 .ctaGrid {
@@ -655,6 +657,8 @@
   grid-template-columns: 1fr;
   gap: 3rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -664,7 +668,7 @@
 }
 
 .ctaText {
-  color: var(--color-white);
+  color: var(--on-surface);
 }
 
 .ctaTitle {
@@ -682,17 +686,17 @@
 
 .ctaSubtitle {
   font-size: 1.125rem;
-  color: var(--color-blue-100);
+  color: var(--on-surface-variant);
   margin-bottom: 3rem;
-  opacity: 0.8;
+  font-weight: 500;
 }
 
 .testimonial {
-  background-color: var(--overlay-white-10);
-  border: 1px solid var(--overlay-white-20);
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--border-surface);
   padding: 2rem;
   border-radius: 1.5rem;
-  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-card-sm);
 }
 
 .testimonialText {
@@ -700,33 +704,37 @@
   font-style: italic;
   line-height: 1.625;
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .testimonialAuthor {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-style: normal;
 }
 
 .authorAvatar {
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-  background-color: var(--color-blue-400);
+  background-color: var(--primary-container);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.875rem;
 }
 
 .authorName {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .authorRole {
   font-size: 0.875rem;
-  opacity: 0.6;
+  opacity: 0.8;
+  font-weight: 500;
 }
 
 .ctaFormWrapper {
@@ -744,15 +752,16 @@
   background-color: var(--color-white);
   padding: 2.5rem;
   border-radius: 1.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-image);
   max-width: 32rem;
   width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .formTitle {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--color-slate-900);
+  color: var(--on-surface);
   margin-bottom: 1.5rem;
 }
 
@@ -763,14 +772,15 @@
 }
 
 .formDesc {
-  color: var(--secondary);
+  color: var(--on-surface-variant);
   line-height: 1.625;
   margin-bottom: 2.5rem;
+  font-weight: 500;
 }
 
 .formBtn {
   width: 100%;
-  background-color: var(--primary-container);
+  background: var(--gradient-primary);
   color: var(--color-white);
   padding: 1.25rem;
   border-radius: 0.75rem;
@@ -780,12 +790,28 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-button-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.formBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 4s infinite;
 }
 
 .formBtn:hover {
-  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-strong-hover);
+  opacity: 0.98;
 }
 
 .formBtn:hover .btnArrow {
@@ -800,9 +826,10 @@
   font-size: 0.625rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: var(--outline);
+  color: var(--on-surface-variant);
   text-align: center;
   text-transform: uppercase;
+  opacity: 0.5;
 }
 
 /* Material Icons */
