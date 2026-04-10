@@ -49,12 +49,14 @@ export const Header: React.FC = () => {
                   <a href="#pricing">{t('nav.pricing')}</a>
                   <a href="#functionality">{t('nav.howItWorks')}</a>
                   <a href="#lead">{t('nav.reviews')}</a>
-                  <Link to="/internal-analytics">Аналитика</Link>
+                  <Link to="/internal-analytics">{t('nav.internalAnalytics')}</Link>
                 </>
               ) : (
                 <>
+                  <a href="#features">{t('nav.features')}</a>
+                  <a href="#advantages">{t('nav.advantages')}</a>
                   <a href="#tariffs">{t('nav.pricing')}</a>
-                  <Link to="/">На главную</Link>
+                  <Link to="/">{t('nav.externalAnalytics')}</Link>
                 </>
               )}
             </div>

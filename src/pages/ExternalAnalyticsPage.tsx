@@ -7,7 +7,7 @@ import { Pricing } from '../components/Pricing';
 import { LeadForm } from '../components/LeadForm';
 import styles from '../App.module.css';
 
-const MainPage: React.FC = () => {
+const ExternalAnalyticsPage: React.FC = () => {
   return (
     <main className={styles.main}>
       <Hero />
@@ -20,4 +20,4 @@ const MainPage: React.FC = () => {
   );
 };
 
-export default MainPage;
+export default ExternalAnalyticsPage;

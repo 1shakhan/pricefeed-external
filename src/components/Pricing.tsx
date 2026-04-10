@@ -72,6 +72,11 @@ export const Pricing: React.FC = () => {
               <span className={styles.priceRecommended}>{t('pricing.plan1.price')}</span>
               <span className={styles.period}>/ {t('pricing.month')}</span>
             </div>
+            {t('pricing.plan1.oldPrice') && (
+              <div className={styles.oldPrice}>
+                {t('pricing.instead')} {t('pricing.plan1.oldPrice')}
+              </div>
+            )}
             <p className={styles.cardDesc}>{t('pricing.plan1.desc')}</p>
 
             {renderFeatures()}

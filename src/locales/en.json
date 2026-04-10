@@ -6,7 +6,11 @@
     "howItWorks": "How it works",
     "reviews": "Reviews",
     "login": "Log in",
-    "apply": "Apply for access"
+    "apply": "Apply for access",
+    "advantages": "Advantages",
+    "internalAnalytics": "Internal Analytics",
+    "externalAnalytics": "External Analytics",
+    "home": "Home"
   },
   "hero": {
     "badge": "30% more convenient than competitors",
@@ -84,6 +88,7 @@
     "recommended": "Recommended",
     "months": "months",
     "month": "1 month",
+    "instead": "Instead of",
     "plan3": {
       "title": "Analytics for 3 months",
       "price": "37 800 ₸",

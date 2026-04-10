@@ -1,0 +1,213 @@
+.container {
+  max-width: var(--max-w-7xl);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ctaSection {
+  padding: 6rem 0;
+  background-color: var(--surface-container-low);
+  overflow: hidden;
+  position: relative;
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .ctaGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ctaText {
+  color: var(--on-surface);
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ctaTitle {
+    font-size: 3rem;
+  }
+}
+
+.ctaSubtitle {
+  font-size: 1.125rem;
+  color: var(--on-surface-variant);
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.testimonial {
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--border-surface);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-card-sm);
+}
+
+.testimonialText {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-style: normal;
+}
+
+.authorAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: var(--primary-container);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.authorName {
+  font-weight: 800;
+}
+
+.authorRole {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.ctaFormWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .ctaFormWrapper {
+    justify-content: flex-end;
+  }
+}
+
+.ctaForm {
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-image);
+  max-width: 32rem;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .formTitle {
+    font-size: 1.875rem;
+  }
+}
+
+.formDesc {
+  color: var(--on-surface-variant);
+  line-height: 1.625;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.formBtn {
+  width: 100%;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-button-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.formBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.formBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-strong-hover);
+  opacity: 0.98;
+}
+
+.formBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+.btnArrow {
+  transition: transform 0.2s ease;
+}
+
+.formNote {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--on-surface-variant);
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* Material Icons */
+.materialIcons {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
