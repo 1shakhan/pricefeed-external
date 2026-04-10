@@ -2,12 +2,12 @@ import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import styles from './InternalHero.module.css';
 
-const InternalHero: React.FC = () => {
+export const InternalHero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <section className={styles.hero}>
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
             <h1 className={styles.title}>
@@ -42,5 +42,3 @@ const InternalHero: React.FC = () => {
     </section>
   );
 };
-
-export default InternalHero;

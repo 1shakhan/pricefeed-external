@@ -251,6 +251,7 @@
       "month3": {
         "title": "3 months",
         "price": "12,500 ₸",
+        "unit": "/ mo",
         "oldPrice": "14,700 ₸",
         "discount": "-15%",
         "badge": "Recommended"
@@ -258,6 +259,7 @@
       "month6": {
         "title": "6 months",
         "price": "20,900 ₸",
+        "unit": "/ mo",
         "oldPrice": "29,400 ₸",
         "discount": "-29%"
       },

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './InternalTariffs.module.css';
 import { Icon } from '../Icon';
 
-const InternalTariffs: React.FC = () => {
+export const InternalTariffs: React.FC = () => {
   const { t } = useTranslation();
 
   const tariffs = [
@@ -81,4 +81,3 @@ const InternalTariffs: React.FC = () => {
   );
 };
 
-export default InternalTariffs;

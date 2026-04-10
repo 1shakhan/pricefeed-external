@@ -25,10 +25,10 @@ export type IconName =
   | 'construction'
   | 'attach_money';
 
-type IconProps = {
+interface IconProps {
   name: IconName;
   className?: string;
-};
+}
 
 export const Icon: React.FC<IconProps> = ({ name, className }) => (
   <span 

@@ -251,6 +251,7 @@
       "month3": {
         "title": "3 ай",
         "price": "12 500 ₸",
+        "unit": "/ ай",
         "oldPrice": "14 700 ₸",
         "discount": "-15%",
         "badge": "Ұсынылады"
@@ -258,6 +259,7 @@
       "month6": {
         "title": "6 ай",
         "price": "20 900 ₸",
+        "unit": "/ ай",
         "oldPrice": "29 400 ₸",
         "discount": "-29%"
       },

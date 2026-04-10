@@ -1,23 +1,28 @@
 .tariffs {
-  padding: 8rem 0;
+  padding: 2rem 0;
   background-color: var(--surface);
-  background-image: radial-gradient(circle at center, var(--overlay-primary-5) 0%, transparent 70%);
+}
+
+@media (min-width: 1024px) {
+  .tariffs {
+    padding: 3rem 0;
+  }
 }
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 1.25rem;
   color: var(--on-surface);
   letter-spacing: -0.02em;
 
   @media (min-width: 768px) {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
 }
 
@@ -30,7 +35,7 @@
 .tariffsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: stretch;
 
   @media (min-width: 1024px) {
@@ -40,33 +45,31 @@
 
 .tariffCard {
   background-color: var(--surface-container-lowest);
-  padding: 3rem 2.25rem;
+  padding: 2.5rem 2rem;
   border-radius: var(--radius-lg);
-  border: var(--border-surface);
+  border: 1px solid var(--overlay-black-10);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card-lg);
+  box-shadow: var(--shadow-card-md);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-card-lg-hover);
-    border-color: var(--primary-container);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-md-hover);
   }
 }
 
 .tariffFeatured {
   border: 2px solid var(--primary);
   box-shadow: var(--shadow-primary-card);
-  animation: pulse-glow 4s ease-in-out infinite;
   z-index: 10;
 
   @media (min-width: 1024px) {
-    transform: scale(1.05);
+    transform: scale(1.03);
 
     &:hover {
-      transform: scale(1.08) translateY(-10px);
+      transform: scale(1.05) translateY(-5px);
     }
   }
 }
@@ -78,50 +81,49 @@
   transform: translateX(-50%);
   background: var(--gradient-primary);
   color: var(--color-white);
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.25rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   box-shadow: var(--shadow-button);
 }
 
 .tariffHeader {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .tariffTitle {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: var(--on-surface);
 }
 
 .tariffTitleFeatured {
   font-size: 1.75rem;
   font-weight: 800;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: var(--on-surface);
 }
 
 .priceWrapper {
   display: flex;
   align-items: baseline;
-  gap: 0.625rem;
-  margin-bottom: 1.25rem;
-  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .tariffPrice {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.01em;
 }
 
 .tariffPriceFeatured {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.01em;
@@ -129,7 +131,7 @@
 
 .priceUnit {
   color: var(--on-surface-variant);
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 
@@ -140,103 +142,67 @@
   font-weight: 800;
   padding: 0.25rem 0.625rem;
   border-radius: var(--radius-sm);
+  margin-left: 0.5rem;
 }
 
 .oldPrice {
   color: var(--on-surface-variant);
   font-size: 0.875rem;
   text-decoration: line-through;
-  margin-top: 0.25rem;
+  font-weight: 500;
 }
 
 .tariffFeatures {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   flex-grow: 1;
 }
 
 .tariffFeature {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  font-size: 0.875rem;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
   color: var(--on-surface-variant);
   font-weight: 500;
 }
 
 .checkIcon {
-  font-size: 1.25rem;
   color: var(--primary);
-  margin-top: 0.125rem;
   flex-shrink: 0;
+  margin-top: 0.125rem;
 }
 
 .btnPrimary {
   width: 100%;
   background: var(--gradient-primary);
   color: var(--color-white);
-  padding: 1.125rem;
+  padding: 1rem;
   border-radius: var(--radius-md);
   font-weight: 700;
   font-size: 1.125rem;
   box-shadow: var(--shadow-button-strong);
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    animation: shine 4s infinite;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-button-strong-hover);
-    opacity: 0.98;
-  }
-
-  &:active {
-    transform: scale(0.98);
-  }
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-strong-hover);
 }
 
 .btnSecondary {
   width: 100%;
-  background-color: var(--surface-container-low);
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  background-color: var(--surface-container-high);
+  color: var(--on-surface);
   padding: 1rem;
   border-radius: var(--radius-md);
   font-weight: 700;
   font-size: 1.125rem;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: var(--primary);
-    color: var(--color-white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-button);
-  }
-
-  &:active {
-    transform: scale(0.98);
-  }
+  transition: all 0.2s ease;
 }
 
-@keyframes shine {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px var(--overlay-primary-10); }
-  50% { box-shadow: 0 0 40px var(--overlay-primary-20); }
+.btnSecondary:hover {
+  background-color: var(--surface-container-highest);
 }
