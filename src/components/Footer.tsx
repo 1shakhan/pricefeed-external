@@ -100,9 +100,7 @@ export const Footer: React.FC = () => {
         <div className={styles.residents}>
           <p className={styles.residentsText}>{t('footer.residents')}</p>
           <div className={styles.residentsLogo}>
-            <div aria-label="Astana Hub" className={styles.hubCard}>
-              <AstanaHubLogo />
-            </div>
+            <AstanaHubLogo />
           </div>
         </div>
 

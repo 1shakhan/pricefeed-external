@@ -146,6 +146,138 @@
     "terms": "Terms of Service Agreement",
     "privacy": "Privacy Policy"
   },
+  "internalAnalytics": {
+    "hero": {
+      "title": "Digitize your store on Kaspi: <1>accurate unit economics</1> and sales analytics",
+      "subtitle": "Control profitability, account for all hidden costs (commissions, taxes, delivery) and make decisions based on numbers, not intuition.",
+      "ctaConsult": "Get consultation",
+      "ctaDemo": "3-day demo version"
+    },
+    "advantages": {
+      "title": "Tools for your business growth",
+      "subtitle": "Advantages of working with our analytics platform",
+      "control": {
+        "title": "Full Control",
+        "desc": "All your store's products in a single window. Determine profitability for each product."
+      },
+      "precision": {
+        "title": "Maximum Accuracy",
+        "desc": "No approximate calculations. We take into account all taxes, logistics, and commissions."
+      },
+      "automation": {
+        "title": "Automation",
+        "desc": "Free up time for strategy. We take over routine calculations."
+      }
+    },
+    "bento": {
+      "title": "Everything you need to analyze your store sales",
+      "subtitle": "All functions of a professional dashboard are now available in one click right in the browser",
+      "unit": {
+        "title": "Unit Economics",
+        "desc": "Accurate cost price of each product. We take into account everything: packaging, Kaspi delivery, purchase price, taxes, and marketplace commissions in real time."
+      },
+      "summary": {
+        "badge": "Recommended",
+        "title": "Store Summary",
+        "features": [
+          "Sales and Returns",
+          "Average Check",
+          "Express Orders",
+          "Delivery Costs"
+        ]
+      },
+      "abc": {
+        "title": "ABC Analysis",
+        "desc": "Intelligent distribution of products by revenue. Find out which products bring 80% of profits."
+      },
+      "margin": {
+        "title": "Profitability",
+        "desc": "Instant calculation of net profit in tenge (₸) and percentage (%). See real efficiency."
+      },
+      "advanced": {
+        "title": "Advanced Features",
+        "features": [
+          "Waybill merging",
+          "Product labels",
+          "Smart filters",
+          "«Find out number»"
+        ],
+        "whatsappNote": "We help set up and train – all in WhatsApp"
+      }
+    },
+    "more": {
+      "title": "More than just analytics",
+      "subtitle": "An ecosystem of tools for full control over your store on Kaspi.",
+      "items": [
+        {
+          "title": "Kaspi Product Analytics",
+          "desc": "Product analytics across the entire Kaspi marketplace by each category and TOP brands and products"
+        },
+        {
+          "title": "Work with Predictions",
+          "desc": "Manage future receipts and orders. Plan purchases based on demand forecasts and current stock."
+        },
+        {
+          "title": "Warehouse and Logistics",
+          "desc": "Print labels, manage shipments and invoices. Automate the routine of warehouse processes in one click."
+        },
+        {
+          "title": "Product Price Management",
+          "desc": "Automate your pricing strategy. React to competitors' changes in real time."
+        },
+        {
+          "title": "Gold Price Changes",
+          "desc": "Specialized monitoring of market quotes for the jewelry business and accurate calculation of cost."
+        },
+        {
+          "title": "Chrome and Yandex Extension",
+          "desc": "Extension for Google Chrome and Yandex browser right in the Kaspi interface."
+        }
+      ]
+    },
+    "tariffs": {
+      "title": "Internal Analytics Tariffs",
+      "subtitle": "Choose a suitable subscription period",
+      "month1": {
+        "title": "1 month",
+        "price": "4,900 ₸",
+        "unit": "/ mo"
+      },
+      "month3": {
+        "title": "3 months",
+        "price": "12,500 ₸",
+        "oldPrice": "14,700 ₸",
+        "discount": "-15%",
+        "badge": "Recommended"
+      },
+      "month6": {
+        "title": "6 months",
+        "price": "20,900 ₸",
+        "oldPrice": "29,400 ₸",
+        "discount": "-29%"
+      },
+      "connect": "Connect",
+      "features": [
+        "Unit Economics",
+        "Accurate cost price of each product including all expenses",
+        "General store statistics",
+        "ABC Analysis",
+        "Product Profitability",
+        "Flexible data setup"
+      ]
+    },
+    "cta": {
+      "title": "Ready to count real profit, not just revenue?",
+      "subtitle": "Leave a request, and we will open access to accurate unit economics of your store within 15 minutes.",
+      "testimonial": "\"Previously, we only focused on sales volume until we calculated Kaspi returns and commissions. PriceFeed showed our real profitability for each product. Now we only scale what actually brings money.\"",
+      "author": "Serik A.",
+      "role": "Store owner, Kaspi Store",
+      "formTitle": "Free Store Audit",
+      "formDesc": "Try breaking down your store's products by ABC analysis to understand profits today.",
+      "formBtn": "Get free access for 3 days",
+      "note": "No commitments • Instant start"
+    }
+  },
   "whatsapp": {
     "message": "Hello! I would like to learn more about the PriceFeed kaspi bot and its capabilities."
   }

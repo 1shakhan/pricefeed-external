@@ -27,11 +27,25 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  gap: 0.75rem;
   
   & svg {
     display: block;
     width: clamp(7.5rem, 10vw, 9.5rem);
     height: auto;
+  }
+}
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  border-left: 2px solid var(--overlay-black-10);
+  padding-left: 0.75rem;
+  white-space: nowrap;
+  
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 

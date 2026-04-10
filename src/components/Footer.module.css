@@ -83,22 +83,12 @@
 .residentsLogo {
   display: flex;
   justify-content: center;
-}
-
-.hubCard {
-  background-color: var(--overlay-white-10);
-  backdrop-filter: blur(12px);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--border-white-soft);
+  width: 100%;
 }
 
 .hubLogo {
-  height: 2.5rem;
-  width: auto;
+  width: 100%;
+  height: auto;
   display: block;
   color: var(--color-white);
   flex-shrink: 0;
