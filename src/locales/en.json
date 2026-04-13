@@ -121,7 +121,9 @@
     ],
     "unlimited": "Unlimited use of Chrome extension",
     "select": "Select plan",
-    "try": "Try now"
+    "try": "Try now",
+    "collapse": "Collapse",
+    "limitsLabel": "Bot item limits:"
   },
   "lead": {
     "title": "Ready to scale sales on Kaspi?",

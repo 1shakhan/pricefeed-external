@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './InternalTariffs.module.css';
-import { Icon } from '../Icon';
+import { TariffCard } from '../TariffCard';
 
 export const InternalTariffs: React.FC = () => {
   const { t } = useTranslation();
@@ -21,6 +21,8 @@ export const InternalTariffs: React.FC = () => {
     },
   ];
 
+  const features = t('internalAnalytics.tariffs.features', { returnObjects: true }) as string[];
+
   return (
     <section className={styles.tariffs} id="tariffs">
       <div className="container">
@@ -32,47 +34,15 @@ export const InternalTariffs: React.FC = () => {
           {tariffs.map((tariff) => {
             const data = t(`internalAnalytics.tariffs.${tariff.key}`, { returnObjects: true }) as any;
             return (
-              <div 
-                key={tariff.key} 
-                className={`${styles.tariffCard} ${tariff.featured ? styles.tariffFeatured : ''}`}
-              >
-                {tariff.featured && (
-                  <div className={styles.featuredBadge}>
-                    {data.badge || t('pricing.recommended')}
-                  </div>
-                )}
-                
-                <div className={styles.tariffHeader}>
-                  <h3 className={tariff.featured ? styles.tariffTitleFeatured : styles.tariffTitle}>
-                    {data.title}
-                  </h3>
-                  <div className={styles.priceWrapper}>
-                    <span className={tariff.featured ? styles.tariffPriceFeatured : styles.tariffPrice}>
-                      {data.price}
-                    </span>
-                    {data.unit && <span className={styles.priceUnit}>{data.unit}</span>}
-                    {data.discount && <span className={styles.discountBadge}>{data.discount}</span>}
-                  </div>
-                  {data.oldPrice && (
-                    <div className={styles.oldPrice}>
-                      {t('pricing.instead')} {data.oldPrice}
-                    </div>
-                  )}
-                </div>
-
-                <ul className={styles.tariffFeatures}>
-                  {(t('internalAnalytics.tariffs.features', { returnObjects: true }) as string[]).map((feature, i) => (
-                    <li key={i} className={styles.tariffFeature}>
-                      <Icon className={styles.checkIcon} name="check_circle" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button className={tariff.featured ? styles.btnPrimary : styles.btnSecondary}>
-                  {t('internalAnalytics.tariffs.connect')}
-                </button>
-              </div>
+              <TariffCard
+                key={tariff.key}
+                title={data.title}
+                price={data.price.replace(' ₸', '')}
+                period={data.unit?.replace('/ ', '')}
+                badge={tariff.featured ? (data.badge || t('pricing.recommended')) : undefined}
+                features={features}
+                isRecommended={tariff.featured}
+              />
             );
           })}
         </div>
@@ -80,4 +50,3 @@ export const InternalTariffs: React.FC = () => {
     </section>
   );
 };
-
