@@ -47,13 +47,21 @@
 }
 
 .bentoCard {
-  background-color: var(--surface-container-lowest);
-  padding: 2rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--overlay-black-10);
-  box-shadow: var(--shadow-card-sm);
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bentoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
 }
 
 .cardLarge {
@@ -80,54 +88,73 @@
 
 .cardContent {
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardIcon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .cardTitle {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--on-surface);
+  color: #1c1c1e;
+  line-height: 1.2;
 }
 
 .cardDesc {
-  color: var(--on-surface-variant);
-  font-size: 1.125rem;
-  line-height: 1.6;
+  color: #434654;
+  font-size: 1.05rem;
+  line-height: 1.5;
   font-weight: 500;
 }
 
 .badge {
-  background-color: var(--overlay-primary-10);
-  color: var(--primary);
+  background-color: rgba(82, 109, 241, 0.1);
+  color: #526df1;
   font-size: 0.75rem;
-  font-weight: 800;
-  padding: 0.35rem 1rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   width: fit-content;
-  margin-bottom: 1.5rem;
-  border: var(--border-primary-subtle);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(82, 109, 241, 0.2);
 }
 
 .featureList {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
-  color: var(--on-surface-variant);
+  gap: 0.75rem;
+  margin-top: auto;
 }
 
 .featureItem {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.95rem;
   font-weight: 500;
+  color: #434654;
+  line-height: 1.4;
 }
 
 .checkIcon {
-  color: var(--primary);
-  font-size: 1.25rem;
+  color: #526df1;
+  font-size: 1.125rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
 }
 
 .whatsappNote {

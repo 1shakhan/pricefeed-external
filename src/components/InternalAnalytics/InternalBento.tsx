@@ -17,6 +17,7 @@ export const InternalBento: React.FC = () => {
         <div className={styles.bentoGrid}>
           {/* Unit Economics - Large Card */}
           <div className={`${styles.bentoCard} ${styles.cardLarge}`}>
+            <Icon name="insights" className={styles.cardIcon} />
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{t('internalAnalytics.bento.unit.title')}</h3>
               <p className={styles.cardDesc}>{t('internalAnalytics.bento.unit.desc')}</p>
@@ -25,6 +26,7 @@ export const InternalBento: React.FC = () => {
           
           {/* Store Summary - Medium Card */}
           <div className={`${styles.bentoCard} ${styles.cardMedium}`}>
+            <Icon name="bar_chart" className={styles.cardIcon} />
             <div className={styles.cardContent}>
               <div className={styles.badge}>{t('internalAnalytics.bento.summary.badge')}</div>
               <h3 className={styles.cardTitle}>{t('internalAnalytics.bento.summary.title')}</h3>
@@ -41,6 +43,7 @@ export const InternalBento: React.FC = () => {
           
           {/* ABC Analysis - Small Card */}
           <div className={styles.bentoCard}>
+            <Icon name="trending_up" className={styles.cardIcon} />
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{t('internalAnalytics.bento.abc.title')}</h3>
               <p className={styles.cardDesc}>{t('internalAnalytics.bento.abc.desc')}</p>
@@ -49,6 +52,7 @@ export const InternalBento: React.FC = () => {
           
           {/* Margin - Small Card */}
           <div className={styles.bentoCard}>
+            <Icon name="calculate" className={styles.cardIcon} />
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{t('internalAnalytics.bento.margin.title')}</h3>
               <p className={styles.cardDesc}>{t('internalAnalytics.bento.margin.desc')}</p>
@@ -57,6 +61,7 @@ export const InternalBento: React.FC = () => {
           
           {/* Advanced Features - Medium Card */}
           <div className={`${styles.bentoCard} ${styles.cardMedium}`}>
+            <Icon name="bolt" className={styles.cardIcon} />
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{t('internalAnalytics.bento.advanced.title')}</h3>
               <ul className={styles.featureList}>
