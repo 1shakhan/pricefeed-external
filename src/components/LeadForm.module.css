@@ -1,21 +1,28 @@
 .leadForm {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background-color: var(--surface-container-low);
   overflow: hidden;
   position: relative;
+  @media (min-width: 768px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5rem;
+  gap: 3rem;
   align-items: center;
   position: relative;
   z-index: 1;
-
+  @media (min-width: 640px) {
+    gap: 4rem;
+  }
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
   }
 }
 
@@ -24,23 +31,27 @@
 }
 
 .title {
-  font-size: 2.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
-
   @media (min-width: 768px) {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
   }
 }
 
 .subtitle {
   color: var(--on-surface-variant);
-  font-size: 1.25rem;
-  margin-bottom: 4rem;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
   font-weight: 500;
   max-width: 32rem;
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .quoteCard {
@@ -92,34 +103,48 @@
 
 .formCard {
   background-color: white;
-  padding: 3.5rem 3rem;
+  padding: 2rem 1.5rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-image);
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.8);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
+  @media (min-width: 640px) {
+    padding: 2.5rem 2rem;
+  }
+  @media (min-width: 768px) {
+    padding: 3rem 2.5rem;
+  }
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
   }
 }
 
 .formTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--on-surface);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .formDesc {
   color: var(--on-surface-variant);
-  font-size: 1.125rem;
-  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
   font-weight: 500;
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
 }
 
 .actions {

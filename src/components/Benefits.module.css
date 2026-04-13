@@ -1,29 +1,40 @@
 .benefits {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background-color: var(--surface);
   position: relative;
+  @media (min-width: 768px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-
+  gap: 1.5rem;
+  @media (min-width: 640px) {
+    gap: 1.75rem;
+  }
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
 
 .card {
   background-color: var(--surface-container-lowest);
-  padding: 3rem 2rem;
-  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
   box-shadow: var(--shadow-card-md);
   border: var(--border-surface);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  @media (min-width: 768px) {
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+  }
 
   &::before {
     content: '';
@@ -31,20 +42,20 @@
     inset: 0;
     background: linear-gradient(135deg, var(--overlay-primary-5), transparent);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
   }
 
   &:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-card-lg-hover);
-    border-color: var(--primary-container);
+    border-color: rgba(0, 82, 204, 0.15);
     
     &::before {
       opacity: 1;
     }
 
     & .iconWrapper {
-      transform: scale(1.1) rotate(5deg);
+      transform: scale(1.08);
       background-color: var(--primary);
       color: var(--color-white);
     }
@@ -56,39 +67,53 @@
 }
 
 .iconWrapper {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   background-color: var(--overlay-primary-10);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   box-shadow: var(--shadow-inset-soft);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--primary);
+  @media (min-width: 768px) {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .icon {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: inherit;
-  transition: color 0.4s ease;
+  transition: color 0.3s ease;
+  @media (min-width: 768px) {
+    font-size: 1.75rem;
+  }
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--on-surface);
   position: relative;
   z-index: 1;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 .desc {
   color: var(--on-surface-variant);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   position: relative;
   z-index: 1;
   font-weight: 500;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }

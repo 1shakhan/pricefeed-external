@@ -1,28 +1,31 @@
 .tariffs {
-  padding: 2rem 0;
+  padding: 3rem 0;
   background-color: var(--surface);
-}
-
-@media (min-width: 1024px) {
-  .tariffs {
-    padding: 3rem 0;
+  @media (min-width: 768px) {
+    padding: 4rem 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 5rem 0;
   }
 }
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  @media (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
 }
 
 .sectionTitle {
-  font-size: 2.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--on-surface);
   letter-spacing: -0.02em;
-
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -35,11 +38,14 @@
 .tariffsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: stretch;
-
+  @media (min-width: 640px) {
+    gap: 2rem;
+  }
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 

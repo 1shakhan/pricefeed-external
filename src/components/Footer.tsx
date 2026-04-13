@@ -88,13 +88,13 @@ export const Footer: React.FC = () => {
           <a href="#pricing">{t('nav.pricing')}</a>
           <a href="#functionality">{t('nav.howItWorks')}</a>
           <a href="#lead">{t('nav.reviews')}</a>
-          <a href="#ecosystem" className={styles.navWithBadge}>
+          <a href="https://pricefeed.store" className={styles.navWithBadge}>
             {t('footer.nav.training')}
             <span className={styles.badge}>{t('footer.nav.new')}</span>
           </a>
-          <a href="#footer">{t('footer.nav.contacts')}</a>
-          <a href="#top">{t('footer.nav.about')}</a>
-          <a href="#top">{t('nav.login')}</a>
+          <a href="https://pricefeed.kz/#contacts">{t('footer.nav.contacts')}</a>
+          <a href="https://pricefeed.kz/#about">{t('footer.nav.about')}</a>
+          <a href="https://pricefeed.kz/cabinet/sign-in">{t('nav.login')}</a>
         </nav>
 
         <div className={styles.residents}>

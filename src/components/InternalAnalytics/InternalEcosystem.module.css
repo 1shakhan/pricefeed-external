@@ -1,11 +1,11 @@
 .ecosystem {
-  padding: 2rem 0;
+  padding: 3rem 0;
   background-color: var(--surface-container-low);
-}
-
-@media (min-width: 1024px) {
-  .ecosystem {
-    padding: 3rem 0;
+  @media (min-width: 768px) {
+    padding: 4rem 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 5rem 0;
   }
 }
 
@@ -14,16 +14,14 @@
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--on-surface);
   letter-spacing: -0.02em;
-}
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 3rem;
+  @media (min-width: 768px) {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -31,71 +29,89 @@
   color: var(--on-surface-variant);
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
+  @media (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.25rem;
   text-align: left;
-}
-
-@media (min-width: 768px) {
-  .grid {
+  @media (min-width: 640px) {
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media (min-width: 1024px) {
-  .grid {
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .item {
   background-color: var(--surface-container-lowest);
-  padding: 2rem;
-  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
   border: 1px solid var(--overlay-black-5);
   box-shadow: var(--shadow-card-sm);
   transition: all 0.3s ease;
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   align-items: flex-start;
+  @media (min-width: 768px) {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    gap: 1.25rem;
+  }
 }
 
 .item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-card-md);
   border-color: var(--overlay-primary-10);
 }
 
 .itemIcon {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: var(--overlay-primary-10);
-  border-radius: 0.75rem;
+  border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   color: var(--primary);
+  @media (min-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+  }
 }
 
 .itemTitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 800;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: var(--on-surface);
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 .itemDesc {
   color: var(--on-surface-variant);
-  line-height: 1.6;
-  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-size: 0.875rem;
   font-weight: 500;
+  @media (min-width: 768px) {
+    font-size: 0.9375rem;
+  }
 }

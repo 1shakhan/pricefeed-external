@@ -1,23 +1,30 @@
 .functionality {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background-color: var(--surface);
+  @media (min-width: 768px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+  @media (min-width: 768px) {
+    margin-bottom: 5rem;
+  }
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   margin-bottom: 1.25rem;
   color: var(--on-surface);
   letter-spacing: -0.02em;
 
   @media (min-width: 768px) {
-    font-size: 3.25rem;
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
   }
 }
 
@@ -28,34 +35,45 @@
   margin-right: auto;
   font-size: 1.125rem;
   font-weight: 500;
+  padding: 0 1rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
 
+  @media (min-width: 640px) {
+    gap: 1.75rem;
+  }
   @media (min-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
   }
 }
 
 .card {
   background-color: var(--color-white);
-  padding: 2.5rem;
-  border-radius: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 
+  @media (min-width: 768px) {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 82, 204, 0.1);
   }
 }
 
@@ -106,20 +124,22 @@
   z-index: 2;
 }
 
-.cardImage {
-  margin-top: 2rem;
+.cardImageWrapper {
+  margin-top: 1.5rem;
   border-radius: 1rem;
+  overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
   position: relative;
   z-index: 2;
+  min-height: 160px;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
+}
+
+.cardImage {
+  border-radius: 1rem;
 }
 
 .smallCard {

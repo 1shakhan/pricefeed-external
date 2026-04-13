@@ -61,7 +61,9 @@ export const Header: React.FC = () => {
               )}
             </div>
           </div>
-          <button className={styles.loginBtn}>{t('nav.login')}</button>
+          <a href="https://pricefeed.kz/cabinet/sign-in" className={styles.loginBtn}>
+            {t('nav.login')}
+          </a>
           <div className={styles.apps}>
             <StoreBadge href={appStoreUrl} size="compact" store="app-store" theme="light" />
             <StoreBadge href={playStoreUrl} size="compact" store="google-play" theme="light" />

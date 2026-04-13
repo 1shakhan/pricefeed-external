@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Hero.module.css';
 import { Icon } from './Icon';
+import { ImagePlaceholder } from './ImagePlaceholder';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -30,9 +31,10 @@ export const Hero: React.FC = () => {
 
         <div className={styles.imageWrapper}>
           <div className={styles.imageContainer}>
-            <img
+            <ImagePlaceholder
               src="https://lh3.googleusercontent.com/aida/ADBb0ujuRGGjDMgkWmsU53luD5o9btJV_kJkRHOF9Rw8wCHEtb76zE0KDyaCVy5Y11nffA_tooQ8lI74fpxazxMYUbpAerFPFsHw_lKd5hJiBH8oK6ngrH9i1gMi-yoLMicwAxexD7fwqvSMFIlCOwM07ZqJdVvLtZqVJUhjLKU7bxYL72l6BrRYe5rdX6r7FZCYxyRD3Znuwk3z18PHql4Y6qT0LMlnVqhHCO_O32cMNPg5DLWmwkkVAwn9kO4uFYcp7i_UdR6xvZH7EJg"
               alt="PriceFeed sales and turnover analytics"
+              aspectRatio="video"
             />
           </div>
           <div className={styles.blurEffect}></div>

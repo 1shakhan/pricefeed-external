@@ -1,13 +1,13 @@
 .hero {
   position: relative;
-  padding: 2rem 0;
+  padding: 3rem 0 4rem;
   overflow: hidden;
   background: var(--surface);
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    padding: 3rem 0;
+  @media (min-width: 768px) {
+    padding: 4rem 0 5rem;
+  }
+  @media (min-width: 1024px) {
+    padding: 5rem 0 6rem;
   }
 }
 
@@ -16,11 +16,15 @@
   grid-template-columns: 1fr;
   gap: 3rem;
   align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .heroGrid {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 768px) {
+    gap: 4rem;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+  }
+  @media (min-width: 1280px) {
+    grid-template-columns: 1.2fr 0.8fr;
   }
 }
 
@@ -30,19 +34,17 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  line-height: 1.05;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.08;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--on-surface);
   margin-bottom: 1.5rem;
-
   @media (min-width: 768px) {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 6vw, 4rem);
   }
-
   @media (min-width: 1024px) {
-    font-size: 4.25rem;
+    font-size: clamp(3.5rem, 4.5vw, 4.5rem);
   }
 }
 
@@ -74,11 +76,10 @@
   font-size: 1.125rem;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-button-strong);
-}
-
-.btnPrimary:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: var(--shadow-button-strong-hover);
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-button-strong-hover);
+  }
 }
 
 .btnSecondary {
@@ -89,10 +90,9 @@
   font-weight: 700;
   font-size: 1.125rem;
   transition: all 0.2s ease;
-}
-
-.btnSecondary:hover {
-  background-color: var(--surface-container-highest);
+  &:hover {
+    background-color: var(--surface-container-highest);
+  }
 }
 
 .imageWrapper {
@@ -115,14 +115,8 @@
   box-shadow: var(--shadow-image);
   border: 1px solid var(--surface-container-highest);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
+  min-height: 200px;
   &:hover {
     transform: scale(1.02);
   }
-}
-
-.heroImage {
-  width: 100%;
-  height: auto;
-  display: block;
 }

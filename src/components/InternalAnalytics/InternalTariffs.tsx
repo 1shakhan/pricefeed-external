@@ -3,6 +3,15 @@ import { useTranslation } from 'react-i18next';
 import styles from './InternalTariffs.module.css';
 import { TariffCard } from '../TariffCard';
 
+interface TariffData {
+  title: string;
+  price: string;
+  unit?: string;
+  badge?: string;
+  oldPrice?: string;
+  discount?: string;
+}
+
 export const InternalTariffs: React.FC = () => {
   const { t } = useTranslation();
 
@@ -32,7 +41,7 @@ export const InternalTariffs: React.FC = () => {
         </div>
         <div className={styles.tariffsGrid}>
           {tariffs.map((tariff) => {
-            const data = t(`internalAnalytics.tariffs.${tariff.key}`, { returnObjects: true }) as any;
+            const data = t(`internalAnalytics.tariffs.${tariff.key}`, { returnObjects: true }) as TariffData;
             return (
               <TariffCard
                 key={tariff.key}

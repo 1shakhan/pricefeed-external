@@ -1,30 +1,31 @@
 .advantages {
-  padding: 2rem 0;
+  padding: 3rem 0;
   background-color: var(--surface-container-low);
-}
-
-@media (min-width: 1024px) {
-  .advantages {
-    padding: 3rem 0;
+  @media (min-width: 768px) {
+    padding: 4rem 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 5rem 0;
   }
 }
 
 .sectionHeader {
   text-align: center;
   margin-bottom: 3rem;
+  @media (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
 }
 
 .sectionTitle {
-  font-size: 2.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--on-surface);
   letter-spacing: -0.02em;
-}
-
-@media (min-width: 768px) {
-  .sectionTitle {
-    font-size: 3rem;
+  @media (min-width: 768px) {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -32,63 +33,85 @@
   color: var(--on-surface-variant);
   font-size: 1.125rem;
   font-weight: 500;
+  padding: 0 1rem;
 }
 
 .advantagesGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .advantagesGrid {
+  gap: 1.25rem;
+  @media (min-width: 640px) {
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
 
 .advantageCard {
   background-color: var(--surface-container-lowest);
-  padding: 2.5rem 2rem;
-  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-md);
   border: 1px solid var(--overlay-black-5);
   box-shadow: var(--shadow-card-sm);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  @media (min-width: 768px) {
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+  }
 }
 
 .advantageCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-md);
 }
 
 .iconWrapper {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: var(--overlay-primary-10);
-  border-radius: 1rem;
+  border-radius: 0.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   color: var(--primary);
+  @media (min-width: 768px) {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .materialIcons {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .advantageTitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--on-surface);
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
 }
 
 .advantageDesc {
   color: var(--on-surface-variant);
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   font-weight: 500;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
