@@ -21,13 +21,6 @@ export const Functionality: React.FC = () => {
               <h4 className={styles.cardTitle}>{t('functionality.category.title')}</h4>
               <p className={styles.cardDesc}>{t('functionality.category.desc')}</p>
             </div>
-            <div className={styles.cardImageWrapper}>
-              <img
-                className={styles.cardImage}
-                src="https://lh3.googleusercontent.com/aida/ADBb0ugzihRhzgZ4S0yLgEVJ9gaMDFidvuv2OwZdqg-Vbwbo_K6zoHVrn5Le0znAcTdPAvAWmdzy98NimtO57z2zWId6JHoLuPIpobblV2_pfWOslnLloxN6ilISzlbGi_L-q89TVgYLvAEUZ8wkM4EYDCm11MPgWrNDm2wS9jtyBLOPe93euTx5_pttd7yrWma6bKHrk1zMWnta81cv6QmH2BuZn103M9wpHxwY-HQy-uqK2UFxj1DE8xo_HrISAJhn3ZohChJSMbiCcYs"
-                alt="Analytics by category"
-              />
-            </div>
           </div>
 
           <div className={`${styles.card} ${styles.colSpan3}`}>
@@ -35,13 +28,6 @@ export const Functionality: React.FC = () => {
             <div>
               <h4 className={styles.cardTitle}>{t('functionality.calculator.title')}</h4>
               <p className={styles.cardDesc}>{t('functionality.calculator.desc')}</p>
-            </div>
-            <div className={styles.cardImageWrapper}>
-              <img
-                className={styles.cardImage}
-                src="https://lh3.googleusercontent.com/aida/ADBb0ui1rVLuaFdoWwK9nk00EPscKigmk_VKdN4q95CfNkH6tCVCyJqNebanhIeS90b9zcyC218HVWnZrLDfPboXEGBbLablWZBeZSS8fuKBc3k8CN7f0OhW-_QGt2miPRYbg8YteDe2USVdRXddWgQOLmk-lYL7ZFDfvknwc8VPFfujdRJHwVycByixrWUTz9cCuFyclh4l1uZH3HzcNTg4Kl4F3FxQ8MO4kmPXoZx3_DoIlaEq-1xuZZuahQKf3n_6UUCQRmy0FKCosko"
-                alt="Profitability calculator"
-              />
             </div>
           </div>
 

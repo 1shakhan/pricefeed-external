@@ -31,7 +31,7 @@ export const InternalHero: React.FC = () => {
             <div className={styles.imageGlow}></div>
             <div className={styles.imageContainer}>
               <img
-                src="/internal.png"
+                src="/external.png"
                 alt="Internal Analytics Infographic"
               />
             </div>

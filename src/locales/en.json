@@ -14,14 +14,14 @@
   },
   "hero": {
     "badge": "30% more convenient than competitors",
-    "title": "Professional Kaspi.kz analytics right in your browser.",
-    "subtitle": "Highly accurate data with 90% precision. The entire functionality of PriceFeed is now integrated into the Kaspi store interface.",
+    "title": "Professional product analytics on Kaspi.kz with 95% accuracy",
+    "subtitle": "Highly accurate data taking into account recent updates. Moreover, all PriceFeed functionality is now integrated into the Kaspi store interface.",
     "giftcardTitle": "Register right now and get free training and a test drive for 5 requests!",
     "cta": "Get a consultation"
   },
   "benefits": {
     "accuracy": {
-      "title": "90% Accuracy",
+      "title": "95% Accuracy",
       "desc": "PriceFeed algorithms provide the highest data accuracy on the Kazakhstan market."
     },
     "native": {
