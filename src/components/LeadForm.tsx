@@ -30,10 +30,13 @@ export const LeadForm: React.FC = () => {
           <p className={styles.formDesc}>{t('lead.cardDesc')}</p>
 
           <div className={styles.actions}>
-            <button className={styles.cta}>
+            <a
+              className={styles.cta}
+              href="https://pricefeed.kz/cabinet/sign-in"
+            >
               {t('lead.cta')}
               <Icon className={styles.ctaIcon} name="arrow_forward" />
-            </button>
+            </a>
             <p className={styles.note}>{t('lead.note')}</p>
           </div>
         </div>

@@ -30,17 +30,29 @@ export const InternalEcosystem: React.FC = () => {
           <p className={styles.subtitle}>{t('internalAnalytics.more.subtitle')}</p>
           
           <div className={styles.grid}>
-            {items.map((item, index) => (
-              <div key={index} className={styles.item}>
-                <div className={styles.itemIcon}>
-                  <Icon name={icons[index] || 'check_circle'} />
-                </div>
-                <div className={styles.itemContent}>
-                  <h3 className={styles.itemTitle}>{item.title}</h3>
-                  <p className={styles.itemDesc}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
+            {items.map((item, index) => {
+              const isExtension = icons[index] === 'extension';
+              const CardWrapper = isExtension ? 'a' : 'div';
+              const wrapperProps = isExtension
+                ? {
+                    href: 'https://chromewebstore.google.com/detail/pricefeed-kaspi-analytics/mgifccibjcnnkpclibeopjigfandppkc',
+                    rel: 'noreferrer',
+                    target: '_blank',
+                  }
+                : {};
+
+              return (
+                <CardWrapper key={index} className={styles.item} {...wrapperProps}>
+                  <div className={styles.itemIcon}>
+                    <Icon name={icons[index] || 'check_circle'} />
+                  </div>
+                  <div className={styles.itemContent}>
+                    <h3 className={styles.itemTitle}>{item.title}</h3>
+                    <p className={styles.itemDesc}>{item.desc}</p>
+                  </div>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </div>

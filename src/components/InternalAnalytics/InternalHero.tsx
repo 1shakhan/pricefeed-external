@@ -19,12 +19,26 @@ export const InternalHero: React.FC = () => {
               {t('internalAnalytics.hero.subtitle')}
             </p>
             <div className={styles.ctaGroup}>
-              <a href="#tariffs" className={styles.btnPrimary}>
+              <a
+                href={`https://api.whatsapp.com/send/?phone=77772842986&text=${encodeURIComponent(
+                  t('whatsapp.message')
+                )}&type=phone_number&app_absent=0`}
+                className={styles.btnPrimary}
+                rel="noreferrer"
+                target="_blank"
+              >
                 {t('internalAnalytics.hero.ctaConsult')}
               </a>
-              <button className={styles.btnSecondary}>
+              <a
+                href={`https://api.whatsapp.com/send/?phone=77772842986&text=${encodeURIComponent(
+                  t('whatsapp.message')
+                )}&type=phone_number&app_absent=0`}
+                className={styles.btnSecondary}
+                rel="noreferrer"
+                target="_blank"
+              >
                 {t('internalAnalytics.hero.ctaDemo')}
-              </button>
+              </a>
             </div>
           </div>
           <div className={styles.imageWrapper}>

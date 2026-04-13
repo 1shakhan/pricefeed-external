@@ -43,11 +43,16 @@ export const Functionality: React.FC = () => {
             <p className={styles.smallCardDesc}>{t('functionality.cards.desc')}</p>
           </div>
 
-          <div className={`${styles.blueCard} ${styles.colSpan2}`}>
+          <a
+            className={`${styles.blueCard} ${styles.colSpan2}`}
+            href="https://chromewebstore.google.com/detail/pricefeed-kaspi-analytics/mgifccibjcnnkpclibeopjigfandppkc"
+            rel="noreferrer"
+            target="_blank"
+          >
             <Icon className={styles.cardIconBg} name="extension" />
             <h4 className={styles.smallCardTitle}>{t('functionality.extension.title')}</h4>
             <p className={styles.blueCardDesc}>{t('functionality.extension.desc')}</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

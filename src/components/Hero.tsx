@@ -24,7 +24,16 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <a className={styles.cta} href="#lead">{t('hero.cta')}</a>
+            <a
+              className={styles.cta}
+              href={`https://api.whatsapp.com/send/?phone=77772842986&text=${encodeURIComponent(
+                t('whatsapp.message')
+              )}&type=phone_number&app_absent=0`}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {t('hero.cta')}
+            </a>
           </div>
         </div>
 

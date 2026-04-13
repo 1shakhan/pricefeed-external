@@ -33,10 +33,13 @@ export const InternalCTA: React.FC = () => {
               <h3 className={styles.formTitle}>{t('internalAnalytics.cta.formTitle')}</h3>
               <p className={styles.formDesc}>{t('internalAnalytics.cta.formDesc')}</p>
               
-              <button className={styles.formBtn}>
+              <a
+                href="https://pricefeed.kz/cabinet/sign-in"
+                className={styles.formBtn}
+              >
                 {t('internalAnalytics.cta.formBtn')}
                 <Icon className={styles.btnArrow} name="arrow_forward" />
-              </button>
+              </a>
               
               <p className={styles.formNote}>{t('internalAnalytics.cta.note')}</p>
             </div>
