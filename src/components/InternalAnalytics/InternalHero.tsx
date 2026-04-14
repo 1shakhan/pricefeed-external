@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import {useTranslation, Trans} from 'react-i18next';
 import styles from './InternalHero.module.css';
 
 export const InternalHero: React.FC = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   return (
     <section className={styles.hero}>
@@ -44,10 +44,7 @@ export const InternalHero: React.FC = () => {
           <div className={styles.imageWrapper}>
             <div className={styles.imageGlow}></div>
             <div className={styles.imageContainer}>
-              <img
-                src="/external.png"
-                alt="Internal Analytics Infographic"
-              />
+              <img src="/internal.png" alt="Internal Analytics Infographic"/>
             </div>
           </div>
         </div>
