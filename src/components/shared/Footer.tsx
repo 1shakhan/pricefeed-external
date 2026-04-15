@@ -97,12 +97,12 @@ export const Footer: React.FC = () => {
           <a href="https://pricefeed.kz/cabinet/sign-in">{t('nav.login')}</a>
         </nav>
 
-        <div className={styles.residents}>
+        <a className={styles.residents} href="https://astanahub.com/account/company/13371/" target="_blank" rel="noopener noreferrer">
           <p className={styles.residentsText}>{t('footer.residents')}</p>
           <div className={styles.residentsLogo}>
             <AstanaHubLogo />
           </div>
-        </div>
+        </a>
 
         <div className={styles.appLinks}>
           <p className={styles.appText}>{t('footer.app')}</p>
@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
 
         <div className={styles.bottom}>
           <div className={styles.copyright}>
-            <p className={styles.copyrightYear}>© 2025 PriceFeed</p>
+            <p className={styles.copyrightYear}>© 2026 PriceFeed</p>
             <p className={styles.company}>{t('footer.company')}</p>
             <div className={styles.legalLinks}>
               <a href={termsUrl} className={styles.terms} rel="noreferrer" target="_blank">
