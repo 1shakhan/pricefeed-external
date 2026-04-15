@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Benefits.module.css';
-import { Icon } from './Icon';
+import { Icon } from '../shared/Icon.tsx';
 
 export const Benefits: React.FC = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Ecosystem.module.css';
-import { Icon, type IconName } from './Icon';
+import { Icon, type IconName } from '../shared/Icon.tsx';
 
 export const Ecosystem: React.FC = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './LeadForm.module.css';
-import { Icon } from './Icon';
+import { Icon } from '../shared/Icon.tsx';
 
 export const LeadForm: React.FC = () => {
   const { t } = useTranslation();

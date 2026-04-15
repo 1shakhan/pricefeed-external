@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
-import { StoreBadge } from './StoreBadge';
+import { StoreBadge } from '../external/StoreBadge.tsx';
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();

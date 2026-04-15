@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './InternalEcosystem.module.css';
-import { Icon, type IconName } from '../Icon';
+import { Icon, type IconName } from '../shared/Icon.tsx';
 
 interface EcosystemItem {
   title: string;

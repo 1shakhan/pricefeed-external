@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './InternalTariffs.module.css';
-import { TariffCard } from '../TariffCard';
+import { TariffCard } from '../shared/TariffCard.tsx';
 
 interface TariffData {
   title: string;

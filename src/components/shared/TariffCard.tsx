@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Icon } from './Icon';
+import { Icon } from './Icon.tsx';
 import styles from './TariffCard.module.css';
 
 export interface TariffCardProps {

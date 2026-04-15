@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
-import { StoreBadge } from './StoreBadge';
+import { StoreBadge } from '../external/StoreBadge.tsx';
 
 const AstanaHubLogo: React.FC = () => (
   <svg

@@ -171,11 +171,9 @@
 }
 
 .imageContainer {
-  background-color: var(--surface-container-low);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-image);
-  border: 1px solid var(--surface-container-highest);
+  filter: drop-shadow(var(--shadow-image));
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {

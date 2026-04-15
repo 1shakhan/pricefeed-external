@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Functionality.module.css';
-import { Icon } from './Icon';
+import { Icon } from '../shared/Icon.tsx';
 
 export const Functionality: React.FC = () => {
   const { t } = useTranslation();
@@ -49,7 +49,7 @@ export const Functionality: React.FC = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <Icon className={styles.cardIconBg} name="extension" />
+            <Icon className={styles.cardIconBg} name="extension" style={{ color: 'var(--color-white)' }} />
             <h4 className={styles.smallCardTitle}>{t('functionality.extension.title')}</h4>
             <p className={styles.blueCardDesc}>{t('functionality.extension.desc')}</p>
           </a>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Hero.module.css';
-import { Icon } from './Icon';
+import { Icon } from '../shared/Icon.tsx';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
         <div className={styles.imageWrapper}>
           <div className={styles.imageContainer}>
             <img
-              src="/external.png"
+              src="https://pricefeed.kz/assets/swipe-cards/5-desktop.svg"
               alt="PriceFeed sales and turnover analytics"
             />
           </div>
