@@ -23,7 +23,9 @@ export type IconName =
   | 'dashboard'
   | 'bar_chart'
   | 'construction'
-  | 'attach_money';
+  | 'attach_money'
+  | 'menu'
+  | 'close';
 
 interface IconProps {
   name: IconName;

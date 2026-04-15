@@ -35,8 +35,12 @@ i18n
     },
   });
 
+// Set initial lang attribute
+document.documentElement.setAttribute('lang', initialLanguage);
+
 i18n.on('languageChanged', (language) => {
   localStorage.setItem('language', language);
+  document.documentElement.setAttribute('lang', language);
 });
 
 export default i18n;

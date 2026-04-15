@@ -103,7 +103,9 @@
   --radius-xl: 8px;
   --radius-full: 9999px;
 
-  --font-family: 'Apple SD Gothic Neo', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-base: 'Apple SD Gothic Neo', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-kk: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: var(--font-family-base);
   --max-w-7xl: 1180px;
   --header-height: 4.5rem;
 
@@ -241,6 +243,10 @@
   --border-primary-subtle: 1px solid var(--overlay-primary-12);
   --border-white-soft: 1px solid var(--overlay-white-20);
   --border-white-faint: 1px solid var(--overlay-white-10);
+}
+
+html[lang='kk'] {
+  --font-family: var(--font-family-kk);
 }
 
 *, *::before, *::after {

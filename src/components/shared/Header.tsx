@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 import { StoreBadge } from '../external/StoreBadge.tsx';
+import { Icon } from './Icon.tsx';
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const appStoreUrl = 'https://apps.apple.com/kz/app/pricefeed/id6743432249';
   const playStoreUrl = 'https://play.google.com/store/apps/details?id=kz.pricefeed.mobile';
 
@@ -16,13 +18,32 @@ export const Header: React.FC = () => {
     i18n.changeLanguage(event.target.value);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   const isInternalAnalytics = location.pathname === '/internal-analytics';
 
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
         <div className={styles.left}>
-          <Link to="/" className={styles.logo}>
+          <Link to="/" className={styles.logo} onClick={closeMenu}>
             <svg fill="none" height="45" viewBox="0 0 193 45" width="193" xmlns="http://www.w3.org/2000/svg">
               <path d="M30.6084 0.812622H8.85539C8.47779 0.812622 8.17188 1.11853 8.17188 1.49614V7.58564C8.17188 10.3054 10.3754 12.5136 13.0999 12.5136H30.7374C32.831 12.5136 34.6282 14.1531 34.6665 16.2419C34.7047 18.3737 32.9887 20.1136 30.8665 20.1136H28.4288C28.0034 20.1136 27.621 20.3717 27.4585 20.7636L23.2666 30.9972C23.1088 31.3844 23.3908 31.8098 23.8115 31.8098H30.8617C39.5084 31.8098 46.5013 24.7261 46.3579 16.0459C46.2193 7.5474 39.1069 0.812622 30.6084 0.812622Z" fill="#657FFF" />
               <path d="M0.0413768 43.5586L8.41085 23.12C9.15651 21.2989 10.925 20.1135 12.8943 20.1135H21.4024C21.823 20.1135 22.1098 20.5389 21.9473 20.9261L13.5778 41.3646C12.8322 43.1857 11.0637 44.3711 9.09437 44.3711H0.591057C0.170432 44.3711 -0.116358 43.9457 0.0461566 43.5586H0.0413768Z" fill="#657FFF" />
@@ -78,8 +99,46 @@ export const Header: React.FC = () => {
             <option value="kk">Қазақша</option>
             <option value="en">English</option>
           </select>
+          <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
+            <Icon name={isMenuOpen ? 'close' : 'menu'} />
+          </button>
         </div>
       </nav>
+
+      <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+        <div className={styles.mobileLinks}>
+          {!isInternalAnalytics ? (
+            <>
+              <a href="#benefits" onClick={closeMenu}>{t('nav.features')}</a>
+              <a href="#pricing" onClick={closeMenu}>{t('nav.pricing')}</a>
+              <a href="#functionality" onClick={closeMenu}>{t('nav.howItWorks')}</a>
+              <a href="#lead" onClick={closeMenu}>{t('nav.reviews')}</a>
+              <Link to="/internal-analytics" onClick={closeMenu}>{t('nav.internalAnalytics')}</Link>
+            </>
+          ) : (
+            <>
+              <a href="#features" onClick={closeMenu}>{t('nav.features')}</a>
+              <a href="#advantages" onClick={closeMenu}>{t('nav.advantages')}</a>
+              <a href="#tariffs" onClick={closeMenu}>{t('nav.pricing')}</a>
+              <Link to="/" onClick={closeMenu}>{t('nav.externalAnalytics')}</Link>
+            </>
+          )}
+          <hr className={styles.divider} />
+          <div className={styles.mobileApps}>
+            <StoreBadge href={appStoreUrl} size="compact" store="app-store" theme="light" />
+            <StoreBadge href={playStoreUrl} size="compact" store="google-play" theme="light" />
+          </div>
+          <select
+            className={styles.mobileLangSelect}
+            onChange={handleLanguageChange}
+            value={currentLanguage}
+          >
+            <option value="ru">Русский</option>
+            <option value="kk">Қазақша</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
     </header>
   );
 };
