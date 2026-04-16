@@ -110,14 +110,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #1c1c1e;
+  color: var(--pallete-2);
   position: relative;
   z-index: 2;
 }
 
 .cardDesc {
   font-size: 1.05rem;
-  color: #434654;
+  color: var(--pallete-2);
   line-height: 1.5;
   font-weight: 500;
   position: relative;
@@ -201,7 +201,7 @@
 
 .smallCardDesc {
   font-size: 0.95rem;
-  color: #434654;
+  color: var(--pallete-2);
   line-height: 1.5;
   font-weight: 500;
   position: relative;

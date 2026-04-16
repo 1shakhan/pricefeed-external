@@ -92,7 +92,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.625rem;
-  color: #1c1c1e;
+  color: var(--pallete-2);
   line-height: 1.2;
   @media (min-width: 768px) {
     font-size: 1.5rem;
@@ -100,7 +100,7 @@
 }
 
 .cardDesc {
-  color: #434654;
+  color: var(--pallete-2);
   font-size: 0.95rem;
   line-height: 1.5;
   font-weight: 500;
